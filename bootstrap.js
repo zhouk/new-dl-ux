@@ -28,12 +28,16 @@ var clearContent = (function() {
 $(document).ready(function() {
     if (window.location.hash != "#admin") {
         clearContent();
-        //loadStyle();
+        loadStyle();
         renderPage();
     } else {
         $('#page_wrapper,#page').css({ 'background-image': 'none' });
     }
 });
+
+var loadStyle = function() {
+	$('head').append('<link rel="stylesheet" href="http://static.autodesk.net/etc/designs/v021/autodesk/adsk-design/clientlibs/css/fonts.css">');
+}
 
 /* 渲染页面 */
 var renderPage = function() {
