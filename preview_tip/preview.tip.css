@@ -1,0 +1,39 @@
+
+#preview-tip {
+	text-decoration: none;
+	background-color: white;
+	padding: 10px 20px;
+	display:block;
+}
+
+#preview-tip div {
+	font-family:Segoe UI, Helvetica, Arial, Tahoma, Verdana; 
+	font-size:12px; 
+	background-color:#0696d7;
+	display:block;
+	display:none;
+	padding:8px 20px;
+	color:white;
+	position:relative;
+}
+
+#preview-tip span {
+	position:absolute;
+	right: 20px;
+}
+
+#preview-tip em {
+	position:absolute;
+	display:block;
+	right: -14px;
+	top: 0;
+	border:1px solid #787878;
+	color: #787878;
+	width:13px;
+	height:13px;
+	text-align:center;
+	font-style:normal;
+	font-size:10px;
+	vertical-align:middle;
+	line-height:10px;
+}
