@@ -25,7 +25,7 @@ var clearContent = (function() {
 /*
 * document.ready
 */
-$(function() {
+$(document).ready(function() {
     if (window.location.hash != "#admin") {
         clearContent();
         //loadStyle();
@@ -70,12 +70,23 @@ var pageEvents = function() {
         calcBgPos();
     };
     
+    enableSmoothScroll();
+    /*
     if('onhashchange' in window){
         window.onhashchange=function(e){
             e.preventDefault();
+            e.stopPropagation();
         };
-    }
+    }*/
 };
+
+function enableSmoothScroll() {
+	$('.pic, .dnload, .gotop').click(function(e){
+		e.preventDefault();
+		e.stopPropagation();
+		$.smoothScroll({ scrollTarget: $(this).attr('href') });
+	});
+}
 
 /* 播放页面 */
 var playPageCont = function(tabId) {
