@@ -1,0 +1,101 @@
+/*
+* @author: miclay
+*/
+body{ background:#eff1ea;}
+#page_wrapper{ background:url(images/bg_02.png) 0 0 repeat-x;}
+#page{ background:url(images/bg_body_03.jpg) center 113px no-repeat;}
+#nav{ border-bottom:none 0;}
+#main{ padding:0; overflow:hidden;}
+
+#main, h1, h2, h3, h4 { font-family: "Frutiger Next W04 Light", Calibri, Arial !important; }
+
+.fix:after{content:"."; display:block; clear:both; visibility:hidden; height:0;}
+.fix{ zoom:1;}
+.lf{ float:left;}
+.rf{ float:right;}
+img{ border:none 0;}
+ul,ol,li{ list-style-type:none; margin:0; padding:0;}
+
+.pg_banner { display:block; width:960px; height:292px; background:url(images/hero.jpg) 0 3px no-repeat }
+.pg_banner h1 { display: block; margin-left: -10000px; }
+
+.bar_helpme{ height:32px; text-align:right; padding-right:20px;}
+.bar_helpme .icon_help{ color:#888; display:inline-block; background:url(images/icon_help_09.gif) 0 center no-repeat; padding-left:18px; margin-top:8px;}
+.bar_helpme .icon_help:hover{ text-decoration:none;}
+.bar_helpme .icon_help span{ border-bottom:dashed 1px #999;}
+
+.rec_box{ padding:0 19px;}
+.rec_box .tabs{ font-size:14px;}
+.rec_box .tabs li{ float:left; text-align:center; height:54px; line-height:54px; font-weight:700; cursor:pointer; background:url(images/li_re_13.gif) 0 bottom repeat-x #f9f9f9; border:solid 1px #d6d6d6; margin-right:-1px;}
+.rec_box .tabs li.on{ height:57px; line-height:57px; margin-top:-2px; background:#fff; border-bottom:none 0; color:#0696d7; cursor:default;}
+.rec_box .onepage{ padding-top:24px; width:945px; display:none;}
+.rec_box .onepage .item{ float:left; display:inline; padding-right:22px;}
+.rec_box .onepage .pic{ color:#444;}
+.rec_box .onepage .pic img{ display:block; width:164px; height:164px; background:url(images/img_bg_17.png) 0 0 no-repeat; padding:0 3px 3px 0;}
+.rec_box .onepage .t{ display:block; font-size:16px; padding:8px 0 0 10px;  overflow:hidden; width:155px; height:22px; }
+.rec_box .onepage .s{ font-size:12px; line-height:20px; }
+.rec_box .onepage .dnload{ display:block; padding-left:10px; width:156px; height:21px; line-height:21px; background:url(images/dnbg_22.png) right 0 no-repeat #0696d7; color:#fff; margin-top:10px; margin-left:1px;}
+.rec_box .onepage .dnload:hover{ text-decoration:none;}
+.rec_box .onepage .related{ color:#494c44; padding:7px 10px; line-height:18px;}
+.rec_box .onepage .related a{ border-bottom:dashed 1px #999; color:#494c44;}
+.rec_box .onepage .related a:hover{ text-decoration:none;}
+
+.all_products{ padding-top:20px;}
+.all_products .col{ width:425px; padding-left:22px;}
+.all_products h3{ color:#0696d7; font-size:22px;}
+.all_products h4{ font-size:18px; color:#666; font-weight:300;}
+.all_products .list{ padding-bottom:20px;}
+.all_products .list li{ line-height:25px;}
+.all_products .list a{color:#666; border-bottom:dashed 1px #999;}
+.all_products .list a:hover{ text-decoration:none;}
+
+.detailbox{ width:924px; margin:10px auto 0; padding:20px 0; border-top:solid 2px #dbdbdb; word-wrap:break-word; word-break:break-all;}
+.detailbox .main{ border-right:solid 1px #f2f2f2; margin-right:240px;}
+.detailbox .main .title{ color:#0696d7; font-weight:700; margin-bottom:16px;}
+.detailbox .main .brief{ color:#666; font-size:13px;}
+.detailbox .main .brief p{ line-height:20px; margin-top:-5px;}
+.detailbox .main .pic{ float:left; display:inline; margin-right:-167px;}
+.detailbox .main .pic img{ display:block; width:164px; height:164px; background:url(images/img_bg_17.png) 0 0 no-repeat; padding:0 3px 3px 0;}
+.detailbox .main .descrip,
+.detailbox .main .links{ margin-left:167px; padding:0 10px 0 20px;}
+.detailbox .main .links{ padding-top:16px;}
+.detailbox .main .links li{ float:left; display:inline; width:220px; line-height:25px;}
+.detailbox .main .links a{ border-bottom:dashed 1px #999; color:#666;}
+.detailbox .main .links a:hover{ text-decoration:none;}
+.detailbox .tool{ padding-top:10px;}
+.detailbox .like{}
+.detailbox .share{ padding-right:17px; padding-top:5px;}
+.detailbox .share a{ display:inline-block; width:18px; height:18px; background:url(images/share_03.png) 0 0 no-repeat;}
+.detailbox .share a.email{ background-position:0 0;}
+.detailbox .share a.email:hover{ background-position:0 -20px;}
+.detailbox .share a.f{ background-position:-23px 0;}
+.detailbox .share a.f:hover{ background-position:-23px -20px;}
+.detailbox .share a.t{ background-position:-46px 0;}
+.detailbox .share a.t:hover{ background-position:-46px -20px;}
+.detailbox .share a.in{ background-position:-71px 0;}
+.detailbox .share a.in:hover{ background-position:-71px -20px;}
+.detailbox .share a.g{ background-position:-96px 0;}
+.detailbox .share a.g:hover{ background-position:-96px -20px;}
+.detailbox .sider{ padding-left:20px; width:220px; margin-left:-240px;}
+.detailbox .sider .title{ font-size:16px; color:#0696d7; font-weight:700; padding-top:3px; margin-bottom:5px;}
+.detailbox .sider .sub{  font-size:13px; color:#666; margin-top: 15px; }
+.detailbox .sider .des{ color:#666;}
+.detailbox .sider .des p{ line-height:18px; text-indent:-0.7em; padding-left:0.7em; margin-bottom:5px;}
+.detailbox .sider .des a{ color:#666;}
+
+.dnloadbox{ padding-right:20px;}
+.dnloadbox .t{ margin:0; padding:20px 0 10px 0;}
+.dnloadbox table{ border-left:solid 1px #d8d8d8; border-top:solid 1px #d8d8d8; text-align:center; color:#494c44;}
+.dnloadbox table a{ color:#494c44; border-bottom:dashed 1px #8e9091; margin:0 6px;}
+.dnloadbox table a:hover{ text-decoration:none;}
+.dnloadbox th,
+.dnloadbox td{ height:28px; line-height:28px; border-right:solid 1px #d8d8d8; border-bottom:solid 1px #d8d8d8;}
+.dnloadbox th{ background:#e6f4fa; font-weight:300;}
+.dnloadbox tr.even td{ background:#f9f9f9;}
+.dnloadbox tr:hover td{ background:#fdfdf2;}
+
+.boxbtm{ height:18px; line-height:18px; padding:16px 20px 16px 0;}
+.boxbtm .other{ color:#666; font-size:13px; font-weight:700; border-bottom:dashed 1px #999;}
+.boxbtm .other:hover{ text-decoration:none;}
+.boxbtm .gotop{ width:48px; height:18px; background:url(images/top_03.png) 0 0 no-repeat; overflow:hidden; text-indent:-1000px; white-space:nowrap; font-size:0;}
+.boxbtm .gotop:hover{ background-position:0 bottom;}

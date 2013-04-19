@@ -1,0 +1,1140 @@
+/* 201204201100 */
+@import url(/editor/global.css);
+@import url(/editor/showcase.css);
+
+
+#dcheetaheditor, #dceditor_window{z-index:10000 !important} /* Attempt to force editor to show up above popup menus and anything else */
+#quicksearch{z-index: 9000}
+img.greene{width:15px !important; height: 13px !important; border:none !important; background:none !important; -moz-border-radius: none !important; -webkit-border-radius: none !important; border-radius: none !important; border-radius: none !important; -moz-box-shadow: none !important; -webkit-box-shadow: none !important; box-shadow: none !important;}
+
+
+/* This stylesheet is for the Students 'Rebrand and Clean-up Project'
+
+All styles from style-redesign.css have been copied to here and the rebrand styles have been applied
+
+12/30/2011*/
+
+/* GENERAL */
+body {margin:0; padding:0; background:#ebebeb; text-align:center; font:normal 12px/16px Arial, Helvetica, sans-serif; color:#444}
+.clear {clear: both; line-height: 0; font-size: 0; visibility: hidden;}
+.clear_right{clear: right}
+.floatleft {float:left}
+img.floatleft {margin:0 12px 6px 0}
+.description {margin:0 0 18px; padding:0}
+div {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6{color: #444;}
+h2 {font:normal 24px/26px Helvetica, Arial, sans-serif; margin:0 0 18px; padding:0;}
+h3, .showcase .blocklist_desc h1 {font:normal 18px/20px Helvetica, Arial, sans-serif; margin:0 0 1em; padding:0;}
+h4 {font:bold 12px/15px Helvetica, Arial, sans-serif; margin:0 0 12px; padding:0;}
+p {margin: 0 0 12px;	padding: 0;}
+a, a:visited {color: #188; text-decoration: none;}
+a:hover {text-decoration: underline;}
+fieldset {margin: 0 0 12px}
+a.arrowBtn, a#showcase_addgallery {display:block; background:#eee url(/ama/images/arrow_pad_6_6_333.gif) no-repeat right top; color:#333; font:bold 11px/15px Arial; margin:0 0 6px; padding:6px 9px}
+a.arrowPrefix {background:url(/ama/images/arrow_333.gif) no-repeat left top; line-height:16px; padding-left:21px; font-weight:bold}
+
+a.home_kicker{padding-left: 16px; background: url(/ama/images/arrow_kicker.gif) no-repeat left center; line-height: 11px}
+
+.formtable {width:100%}
+.formtable td {text-align:left; vertical-align:top; padding:0.8em 0.4em; border-top:1px solid #e1e1e1}
+.formtable td.label {width:140px}
+.formtable td.label label {display:block; font-weight:bold}
+.formtable td button.step, .formtable td input.step {margin-top:2em}
+.formtable td div {margin:3px 0}
+.formtable thead td {font-weight:bold; border-color:#333}
+
+.formtable tbody.email td.label, .formtable tbody.sms td.label, .formtable tbody.facebook td.label {background:no-repeat left 6px; padding-left:72px; height:80px}
+.formtable tbody.email td.label {background-image:url(/editor/images/icons/rounded/Mail2.png)}
+.formtable tbody.sms td.label {background-image:url(/editor/images/icons/rounded/Text.png)}
+.formtable tbody.facebook td.label {background-image:url(/editor/images/icons/rounded/Facebook.png)}
+
+.success,.failure {font-weight:bold; display:none}
+.success {color:#6a0}
+.failure {color:#d00}
+
+a.new_version{font-style: italic; color:#D00 !important; font-weight: normal !important; font-size: 11px}
+a.product_name, li.product_name {font-size: 12px; margin-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold;}
+.DLM {font-family:Verdana,Helvetica,sans-serif;font-size:12px;height:125px;width:400px}
+.serial {font-weight: bold;}
+
+form a.button {background: #fa0; color: #000; padding: 1px 6px; margin: 0 3px 3px 0; line-height:1.8em}
+form a:hover.button {background-color: #f80;}
+
+p.trouble{display: none}
+
+.loadText {display:block; font:bold 18px/32px Helvetica; color:#666}
+.loadText img {float:left; margin:0 12px 0 0}
+.blockactions {padding:9px 0; margin:0}
+.blockactions a {display:block; float:right; font-weight:; line-height:13px; background:url(/ama/images/arrow_333.gif) no-repeat right center; margin:0 0 4px 0; padding:0 21px 0 0}
+.ie7 .blockactions a {white-space:nowrap;}
+white-space:nowrap;
+select {margin:3px 0}
+.pageNum {float:right;font-size:12px; color:#666}
+
+dl {margin:0 0 18px}
+dt {border-right:1px solid #ddd; font-weight:bold; width:60px; margin-right:18px}
+
+#social {float:right; height:32px; margin:0 0 18px 18px; list-style:none; padding:0}
+#social li {display:inline}
+#social a {}
+#social img {float:left; margin:0 0 0 6px}
+
+/* LISTS */
+/* modifying styles set in global.css */
+.paginationlist span.active {background:#188}
+.filterlist {margin:0 0 18px; height:42px}
+.filterlist li {padding: 3px 12px 6px}
+.filterlist li.label {line-height:33px}
+.filterlist li select, .filterlist li input[type=text] {margin:0}
+.filterlist input[type="submit"] {margin:9px}
+select#filter_university{max-width: 690px}
+#nd_m_network.ie7 select#filter_university, #nd_m_network.ie8 select#filter_university {width:690px} 
+.iconlist {font: 11px/14px Arial, Helvetica, sans-serif; border-top:1px solid #ddd}
+.iconlist li {margin:0; border-bottom:1px solid #ddd; color:#666; background-position:3px 6px}
+.iconlist li a {}
+.iconlist li.profile {background-image:url(/editor/images/icons/fam/silk/user.png)}
+.iconlist li.friends {background-image:url(/editor/images/icons/fam/silk/user_add.png)}
+.iconlist li.blogs {background-image:url(/editor/images/icons/fam/silk/comments.png)}
+.iconlist li.groups {background-image:url(/editor/images/icons/fam/silk/group_of_three.png)}
+.iconlist li.school {background-image:url(/editor/images/icons/fam/silk/bricks.png)}
+.iconlist li.affiliation {background-image:url(/editor/images/icons/fam/silk/group_link.png)}
+.iconlist li.find_people {background-image:url(/editor/images/icons/fam/silk/user_magnify.png)}
+.iconlist li.download {background-image:url(/editor/images/icons/fam/silk/page_white_put.png)}
+.iconlist li.soft {background-image:url(/editor/images/icons/fam/silk/text_list_numbers.png)}
+.iconlist li.path {background-image:url(/editor/images/icons/fam/silk/outline.png)}
+.iconlist li.design {background-image:url(/editor/images/icons/fam/silk/pictures.png)}
+.iconlist li.discussion {background-image:url(/editor/images/icons/fam/silk/comments.png)}
+.iconlist li.like {background-image:url(/ama/images/like_thumb.gif)}
+.iconlist li.facebook {background-image:url(/editor/images/icons/social/facebook_16.png)}
+.iconlist li.twitter {background-image:url(/editor/images/icons/social/twitter_16.png)}
+.iconlist li.linkedin {background-image:url(/editor/images/icons/social/linkedin_16.png)}
+.iconlist li.digg {background-image:url(/editor/images/icons/social/digg_16.png)}
+.iconlist li.tick {background-image:url(/editor/images/icons/fam/silk/tick.png)}
+.iconlist li.new {background-image:url(/editor/images/icons/fam/silk/new.png)}
+.iconlist li.cross {background-image:url(/editor/images/icons/fam/silk/cross.png)}
+.iconlist li.peer {background-image:url(/editor/images/icons/fam/silk/group_of_three.png)}
+
+ul.thumblist {border-top:1px solid #ddd }
+ul.thumblist li {padding:9px 0; margin:0; border-bottom:1px solid #ddd; line-height:13px}
+ul.thumblist li .thumb {width:48px; height:48px; overflow:hidden; text-align: center;}
+ul.thumblist li .msg {margin:0 0 0 60px}
+
+#mylist {font: 11px/14px Arial, Helvetica, sans-serif; border-top:1px solid #ddd; list-style: none; padding: 0 0 24px 0px; margin: auto}
+#mylist li {margin:0; border-bottom:1px solid #ddd; margin: 0; padding: 6px 3px;}
+
+.productlist {list-style:none; display:block; margin:0; padding:0;}
+.productlist li {font-weight:; margin:0 0 6px; padding:0}
+.productlist li a {display:; margin:0; padding:0;}
+.productlist li ul {margin:0 0 10px 0; font-size:11px}
+.productlist li ul li {margin:0; font-weight:normal}
+
+.checklist {list-style:none; display:block; margin:0; padding:0}
+.checklist li {background:url(/ama/images/checkbox.gif) no-repeat left top; padding-left:21px;}
+.checklist li.new_version {background:none;}
+.checklist li.checked {background-image:url(/ama/images/checkbox_checked.gif)}
+.checklist li a {color:#000}
+.checklist li.no_check{background-image: none}
+
+.rankinglist {list-style:none; display:block; margin:0; padding:0}
+.rankinglist li {border-bottom: 1px dotted #CCC; margin:0 0 6px; padding-bottom: 6px;}
+.rankinglist.arrow li{background: url(/ama/images/arrow_orange.gif) no-repeat 8px 3px;}
+.ie7 .rankinglist li {display: inline-block;}
+.rankinglist li .rank {display:block; float:left; width:50px; text-align:center; color:#666}
+.rankinglist li .msg {display:block; margin-left:40px}
+#popularlist li .rank {background: url(/ama/images/like_thumb.gif) no-repeat left center; padding-left:16px; width:20px}
+
+.rankinglist.limargin li {margin:0 0 12px}
+
+.accordionlist {list-style:none; margin:0 0 18px; padding:0; border-bottom:1px solid #ccc;} 
+.accordionlist li {margin:0; padding:0;}
+.ie8 .accordionlist li {overflow:hidden}
+.accordionlist li.open {}
+.accordionlist li h3.panel_title {background:#fff url(/ama/images/slidernavbg.gif) repeat-x left top; color:#555; font:bold 13px/15px Helvetica; margin:0; padding:6px 9px; border-top:1px solid #ccc; cursor:pointer; text-align:left;}
+.ie7 #rightcol .accordionlist li h3.panel_title{width: 222px}
+.accordionlist li h3.panel_title span {display:block; background:url(/ama/images/plus_minus.gif) no-repeat right top}
+.accordionlist li h3.panel_title span cite {float:right; color:#999; padding-right:24px; font-style:normal; font-size:11px; font-family:Arial, Helvetica, sans-serif}
+.accordionlist li.open h3.panel_title {color:#000; border-bottom:1px solid #666; background-image:url(/ama/images/slidernavbg_on.gif)}
+.accordionlist li.open h3.panel_title span {background-position:right bottom}
+.accordionlist li h3.panel_title:hover {color:#188}
+.accordionlist li.open h3.panel_title:hover {color:#000}
+.accordionlist li .panel {display:none; position:relative; padding:12px;}
+.ie7 .accordionlist li .panel {zoom: 1}
+.accordionlist li.open .panel {display:block}
+
+.accordionlist ul {margin:0 12px 12px; border:none;}
+.accordionlist ul li {border:none}
+.accordionlist ul.blocklist, .accordionlist ul.rankinglist, .accordionlist ul.iconlist {margin:0 0 12px}
+.accordionlist ul.iconlist li:after {content:"";display:block;height:0;clear:none;visibility:hidden;}
+
+.accordionlist .clear{clear: left;}
+.accordionlist .msg dt{width: auto; border: none;}
+
+.acc_main{width: 500px; float: left;}
+.acc_sub{width: 200px; float: right}
+
+.product .thumb {float:left; width:75px; text-align:center}
+.product .thumb img {max-width:100%; height: auto; margin:0 auto}
+.product .msg {margin:0 0 0 87px; padding:0}
+.product .msg ul {list-style:none; display:block; width:150px; float:left; margin:0; padding:6px 23px 0 0; font-weight:; border:none}
+.product .msg ul li {margin:0 0 6px; padding:0; border:none}
+.product .msg ul.iconlist li {line-height:16px; background-position:left top; padding-left:24px}
+.product .msg .version_selector {clear:both}
+
+.tablist {list-style:none; display:block; margin:0; padding:6px 0; height:21px}
+.tablist li {display:inline}
+.tablist li a {display:block; float:left; margin:0 6px 0 0; padding:3px 9px; background:#eee; color:#666; font-weight:bold; text-decoration:none}
+.tablist li:hover a {background:#aaa; color:#fff}
+.tablist li.active a {background:#188; color:#fff}
+
+.bulletlist {list-style:none; display:block; margin:6px 0 0; padding:0;}
+.bulletlist li {background:url(/ama/images/arrow_kicker.gif) no-repeat 3px 3px; margin:6px 0; padding:2px; padding-left:24px; line-height:12px}
+
+.bulletlist li span.rank {display:none}
+
+.browselist {list-style:none; display:block; margin:0; padding:0}
+.browselist li {font-weight:bold; clear:both; border-top:1px solid #ccc; margin:0; padding:6px 0}
+.browselist li span {display:block; height:16px; margin:0; padding:3px 0}
+.browselist li a {display:block; float:left; margin:0 6px 0 0; padding:3px 6px; font-size:10px; line-height:10px; background:#eee; color:#666}
+.browselist li a:hover {background:#188; color:#fff; text-decoration:none}
+
+.buttonlist {list-style:none; display:block; margin:0 -18px 0 0; padding:0; font:normal 12px/15px Arial, Helvetica, sans-serif}
+.ie7 .buttonlist {position:relative; zoom:1}
+.buttonlist li {float:left; width:215px; height:60px; background:#eee; margin:0 18px 18px 0; padding:11px; border:1px solid #eee}
+.buttonlist li:hover {border-color:#188}
+
+/*.buttonlist li h3 {background:no-repeat left center; padding-left:24px}
+.buttonlist li.findpeople h3 {background-image:url(/editor/images/icons/fam/silk/magnifier.png)}
+.buttonlist li.allgroups h3 {background-image:url(/editor/images/icons/fam/silk/group_of_three.png)}
+.buttonlist li.mostactive h3 {background-image:url(/editor/images/icons/fam/silk/asterisk_orange.png)}
+.buttonlist li.university h3 {background-image:url(/editor/images/icons/fam/silk/bricks.png)}
+.buttonlist li.groups h3 {background-image:url(/editor/images/icons/fam/silk/group.png)}
+.buttonlist li.recent h3 {background-image:url(/editor/images/icons/fam/silk/new.png)}
+.buttonlist li.mostfriends h3 {background-image:url(/editor/images/icons/fam/silk/user_tick.png)}
+.buttonlist li.friends h3 {background-image:url(/editor/images/icons/fam/silk/user_green.png)}
+.buttonlist li.popular h3 {background-image:url(/editor/images/icons/fam/silk/tag_green.png)}
+*/
+span.nextprevstatus{font-size: 12px; display: block; margin-bottom: 12px;}
+
+div.pagination {float: right; display: block; margin:12px 0;}
+.pagination ul{display:block; list-style:none; margin:0; padding:0;}
+.pagination li {display: block; margin:0; padding:0; float: left;}
+.pagination span, .pagination a {display:block; padding:0px 4px; color:#118888; font:11px/11px Arial;  float: left;}
+.pagination a:hover {text-decoration: underline;}
+.pagination .current {color: #000;}
+
+.pagination .first{background: url(/ama/images/pag_first.gif) no-repeat center center; color: aqua; text-indent: -9999px; width:12px;}
+.pagination .prev{background: url(/ama/images/pag_previous.gif) no-repeat center center; text-indent: -9999em; width:12px}
+.pagination .next{background: url(/ama/images/pag_next.gif) no-repeat center center; text-indent: -9999em;width:12px}
+.pagination .last{background: url(/ama/images/pag_last.gif) no-repeat center center; text-indent: -9999em;width:12px}
+
+.pagination span.first{background-image: url(/ama/images/pag_first_inact.gif);}
+.pagination span.prev{background-image: url(/ama/images/pag_previous_inact.gif);}
+.pagination span.next{background-image: url(/ama/images/pag_next_inact.gif);}
+.pagination span.last{background-image: url(/ama/images/pag_last_inact.gif);}
+
+ul.searchlist {display:block; list-style:none; margin:0 0 18px; padding:0; background:#ddd; overflow:hidden; font:bold 11px/14px Arial; color:#333}
+ul.searchlist input[type=submit]{float:right; display:block; background:#fa0; color:#000; border:none; font:bold 11px/14px Arial; margin:12px; padding:2px 4px}
+ul.searchlist li {display:block; float:left; margin:0; padding:6px 4px; border-right:1px solid #ccc}
+ul.searchlist li input, ul.searchlist li select {margin:0; border:1px solid #bbb; font-size: 11px}
+
+.firefox.participating_schools ul.searchlist li input{width: 115px;}
+.safari.participating_schools ul.searchlist li input{width: 90px;}
+ul.twin {overflow:auto}
+ul.twin li {width:44%; float:left}
+
+
+/* LAYOUT */
+#cmp_wrapper{background: #fff}
+
+#page_wrapper{padding-bottom: 18px; background: url(/ama/images/rebrand/gradient_bg.jpg) repeat-x}
+
+/*styles for the large bg image
+#page_wrapper{padding-bottom: 18px; background: url(/ama/images/bg.jpg) repeat-x left 10px;}
+#page {background: url(/ama/images/lg_bg_image.jpg) no-repeat center 10px;}
+*/
+
+#container {width:960px; margin:0 auto; padding:0 8px; text-align:left; border: none; background: url(/ama/images/rebrand/container_bg.png) repeat-y;}
+.container_cap{height: 8px; margin: 0 auto; width: 976px;}
+.container_cap.bottom{background: url(/ama/images/rebrand/container_cap_bottom.png) no-repeat;}
+#main {padding:18px; margin: 0; background: #fff; min-height: 300px;}
+#sidecol {float:left; width:150px; margin:0 18px 0 0; padding:0}
+#maincol {float:left; width:756px; margin:0; padding:0}
+.article-public_landing #maincol {width:620px}
+#rightcol {width:286px; float:right; clear:right;}
+#centercol {float: left; width: 450px}
+
+.block {border-top:1px solid #ddd; padding:12px 0; margin:0 0 18px}
+
+#rightcol .block {margin:0 0 18px; padding:6px 12px; border:1px solid #ddd}
+#rightcol .block.no_border {border:none}
+#rightcol ul.block {padding-top:0}
+#rightcol .block h3 {margin-bottom:12px}
+#rightcol .block .thumblist {border:none}
+#rightcol .block .thumblist li {border:none; border-top:1px solid #ddd}
+
+#rightcol img.promo {width:240px; height:auto; margin:0 0 18px; padding:18px 0px; display:block}
+#rightcol .promo {padding: 0 0 18px 0}
+
+
+.promo {padding:18px 0}
+
+#pagetabs, .maintabs {list-style:none; display:block; margin:0 0 18px; padding:0 6px; font:bold 18px/21px Helvetica; background:url(/ama/images/slidernavbg.gif) repeat-x left bottom; height:40px; border-bottom:1px solid #188}
+#pagetabs li, .maintabs li {display:inline}
+#pagetabs li a, .maintabs li a {display:block; float:left; margin:0 3px; padding:9px 21px; color:#888; outline:none; background:url(/ama/images/sliderbg.gif) repeat-x left bottom; border:1px solid #ccc; border-bottom:none}
+#pagetabs li:hover a, .maintabs li:hover a {color:#188; border-color:#666; text-decoration:none}
+#pagetabs li.active a, .maintabs li a.selected {background:#fff; color:#000; border-color:#188; padding-bottom:10px}
+
+#pagetabs.small, .maintabs {font:bold 12px/15px Helvetica; height:28px; padding:0 3px}
+#pagetabs.small li a, .maintabs li a {padding:6px 15px}
+#pagetabs.small li.active a, .maintabs li a.selected {padding-bottom:7px}
+
+.maintabs {margin-top:12px; padding:0}
+.maintabs li a {padding:6px 6px}
+
+/* for showcase pages, should mimic #centercol and #rightcol */
+.maincol {width:498px; margin:0 18px 0 0; padding:0;}
+.sidecol {width:240px; margin:0; padding:0}
+
+#header {background:#fff; color:#444; height:50px; position:relative; padding:12px 18px; border-top: 5px solid #c7c7c7;}
+#header a {color: #444;}
+#header a:hover, #header a:active {color: #999; text-decoration: none;}
+a#logo{display:block; position: absolute; background: url(/ama/images/autodesk-logo-rgb-color-logo-black-text-medium.png) no-repeat center center; width: 182px; height: 40px; top: 18px; left: 19px; text-indent: -10000px; outline: none;}
+#loginlinks {list-style: none; display: inline;}
+#loginlinks li {margin:0 0 0 12px; padding: 0; float: right; color: #444}
+#loginlinks a {display: block; width: auto; font-weight: bold; padding: 0 7px; border-left: 1px solid #444; line-height: 14px;}
+
+
+#nav {
+	display: block;
+	list-style: none;
+	margin: 0 18px;
+	padding: 6px 0px;
+	background: #fff;
+	position: static;
+	height: 22px;
+	border-bottom: 1px solid #e1e1e1;
+}
+#nav li {
+	display: block;
+	float: left;
+	position: relative;
+	height: auto;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+#nav li:hover {
+	background:;	
+}
+
+#nav li:hover a{
+	color:#999;	
+}
+#nav a {
+	display: block;
+	padding: 0px 18px 0px 6px;
+	color: #444;
+	text-decoration: none;
+	font: bold 12px/14px Arial;
+	/*background: url(/ama/images/line10px.gif) no-repeat left center;*/
+	border-left: 1px solid #444;
+}
+
+/*
+#nav li:hover ul {display: block; z-index: 10}
+#nav ul {
+	display: none;
+	background: #222;
+	list-style: none;
+	margin: 0; padding: 12px 0;
+	position: absolute;
+	top: 21px;
+	left: 0;
+	width: 150px;
+}
+#nav ul li {float: none; display: inline;}
+#nav ul a {
+	display: block;
+	float: none;
+	clear: both;
+	padding: 3px 12px;
+	background: none;
+	font: normal 11px/14px Arial;
+	color: #ccc;
+}
+#nav ul a:hover {background: #444; color: #fff}
+*/
+
+/* PAGE NAME panel_title */
+.title_bar {clear:both; background:#fff; color:#444; padding:7px 18px 8px;	margin:0; font: normal 20px/21px Arial;}
+.siteactions {display:block; float:right; position:relative; list-style:none; margin:0; padding:0; z-index:100;}
+.siteactions li {background:no-repeat 9px center; color:#fff; margin:-3px 0; padding:9px 9px 9px 30px; font:bold 11px/9px Arial; border:none}
+.siteactions li.share {background-image:url(/ama/orig/foreign_assets/images.autodesk.com/adsk/s031/css/images/share_icon_transparent.gif)}
+.siteactions li a {color:#fff}
+.siteactions li:hover {background-color:#fff}
+.siteactions li:hover a {color:#333}
+.siteactions li:hover ul {display:block}
+.siteactions ul {display:none; list-style:none; position:absolute; top:21px; right:0; z-index:101; background:#fff; border:none; margin:0; width:200px; padding:6px}
+.siteactions ul li {width:70px; float:left}
+.siteactions ul li a {}
+
+/*  SLIDESHOW  */
+ul#slideshow {list-style:none; width:960px; height:330px; background:#fff; margin:0; padding:0; overflow:hidden; position: relative}
+ul#slideshow li {width:960px; height:328px; margin:0; padding:0; position: absolute; border-top:1px solid #e1e1e1; border-bottom:1px solid #e1e1e1;}
+ul#slideshow li img {width:100%; border:none; display:block; margin:0; padding:0}
+ul#slideshow li#pager {position:absolute; bottom:18px; left:18px; z-index:800; font:12px/12px Arial, Helvetica, sans-serif; margin: 0; padding: 0; width: auto; height: auto; border: none;}
+
+ul#slideshow li .slide_content{position: absolute; top:18px; right: 20px; max-height: 245px; width: 340px; overflow: hidden; text-align: left; padding: 24px;}
+ul#slideshow li .slide_content h3{font-size: 24px; font-weight: normal; line-height: 1.2em;}
+ul#slideshow li .slide_content p{font-size: 14px; line-height: 1.4em;}
+ul#slideshow li .slide_content a {padding-right: 16px; margin-top:20px; background: url(/ama/images/arrow_banner.gif) no-repeat right center; float: right; font-size: 20px}
+ul#slideshow li .slide_content a:hover {text-decoration: underline}
+.ie7 ul#slideshow li .slide_content, .ie7 ul#slideshow li .slide_content h3, .ie8 ul#slideshow li .slide_content, .ie8 ul#slideshow li .slide_content h3{font-weight: bold !important}
+
+#pager a {display:block; background:#fff; color:#444; padding:5px 8px; float:left; margin:0 3px; outline:none}
+#pager a.activeSlide {background:#444; color:#fff;}
+
+/* new rebranded homepage */
+#home_intro{border-bottom: 1px solid #e1e1e1; margin-bottom:24px;}
+.home_news_item{border-top: 1px solid #ededed; clear: both; padding: 18px 0; overflow: hidden;}
+.home_news_item.first{border-top: none;}
+.news_image{background: #ccc; width: 140px; height: 90px; overflow: hidden; position: relative; float: left; margin-right: 18px;}
+.news_image img{width: 138px; height: auto; border: 1px solid #ededed}
+.news_image .greene{position: absolute; top:5px; left: 5px;}
+.news_content{width: ; float: left; width:460px ;}
+
+/* SIDE COLUMN */
+.profileblock {padding-bottom:12px}
+.profileblock .thumb {display:block; float:left; width:48px; height:48px; overflow:hidden}
+.profileblock .thumb img {width:100%; height:auto;}
+.profileblock .msg {margin:0 0 0 60px; font:normal 11px/14px Arial}
+
+#footer {background:#fff; padding:18px 0; color:#444; overflow:hidden; margin: 0 18px; border-top: 1px solid #e1e1e1}
+#footer a {color: #444; text-decoration: none;}
+#footer a:hover, #footer a:active {color: #999;}
+#footerlinks {
+	list-style: none;
+	display: block;
+	margin: 0; padding: 0;
+	line-height: 8px;
+}
+#footerlinks li {display: block; float: left; width: auto; margin: 0; padding: 0 12px; border-left: 1px solid #999;}
+#footerlinks li:first-child {border: none; padding-left: 0;}
+#footercopy {
+	clear: both;
+	margin: 32px 0 0;	
+}
+
+/* OVERLAY  */
+div#overlay{text-align: left;}
+div#overlay.new_features{padding: 0; border: 1px solid #555;  font-size: 13px;}
+div#overlay.new_features h1{padding: 24px 24px;  margin: 0; font-size: 20px;}
+div#overlay.new_features h1.banner{padding: 18px 24px; background-color: #FA0; color: #FFF;}
+div#overlay.new_features #col_wrapper{padding: 0; background: url(/ama/images/yellow_white_gradient.gif) repeat-x; top left}
+div#overlay.new_features #col_wrapper .col{float: left; width: 212px; padding: 6px 12px; margin-left: 12px;}
+div#overlay.new_features h2{color: #FA0; font-size: 15px; padding: 0; margin: 0 0 6px 0; font-weight:; height: ;  line-height: 1.1em}
+div#overlay.new_features p{line-height: 1.3em}
+div#overlay.new_features input{padding: 12px 0 0 0; margin: 0 6px 0; height: 14px; width:14px; display: inline-block; outline: none;}
+div#overlay.new_features .public{margin-top: 12px;}
+div#overlay.new_features .public a{color: #FA0; font-weight: bold;}
+div#overlay.new_features a.continue{float: right; display:block; background: #DDD; border: 1px solid #BBB; padding: 6px 8px; margin: 0 24px 18px 0; color:#777}
+div#overlay.new_features a.feedback{float: left; display:block; padding: 7px 0px 7px 18px; margin: 0 24px 12px; color:#777; font-size: 11px; background: url(/ama/images/icon_mail.gif) no-repeat left center}
+div#overlay.new_features a:hover.continue{background: #BBB; border: 1px solid #777; color:#555; text-decoration: none;}
+#adskLoginForm #page_overlay_content a, #adskLoginForm #page_overlay_content a:visited {font-weight:bold; color:#188}
+
+
+
+/* M_HOME */
+.tripcolholder {margin-right:-18px; position: relative}
+body.ie7 .tripcolholder {position:relative; zoom:1}
+.tripcol {float:left; width:240px; margin:0 18px 0 0; padding:0;}
+
+
+.tripcol #download{height:128px; background: #FFF url(/ama/images/download.gif) no-repeat top left; border:1px solid #ddd; border-bottom:none;}
+.tripcol #learn{height:128px; background: #FFF url(/ama/images/learn.gif) no-repeat top left; border:1px solid #ddd; border-bottom:none;}
+.tripcol #share{height:128px; background: #FFF url(/ama/images/share.gif) no-repeat top left; border:1px solid #ddd; border-bottom:none;}
+
+.tripcol h3.colhead {background:#fa0; color:#000; font:bold 18px/21px Helvetica; margin:0; padding:6px 9px; text-align:center} 
+.alt h3.colhead {background:#188; color:#fff}
+
+ul.productlist img.prod_box{float: left; padding: 3px 12px 12px 0;}
+ul.productlist li ul{margin-left: 39px;}
+
+
+.tripcol .info{border:1px solid #e1e1e1; border-top:none; padding:12px 18px;}
+.tripcol .info.fullheight {height:620px}
+.tripcol .info .thumb {height:auto}
+
+.tripcol .info .thumblist {border:none}
+.tripcol .info .thumblist li {border:none}
+.tripcol .info .thumblist li img {float:left; width:48px; height:48px; margin:0; padding:0}
+.tripcol .info .thumblist li .msg {margin:0 0 0 60px}
+.tripcol .info .thumblist li .msg h4 {font:bold 12px/15px Arial; margin:0; padding:0} 
+
+#softwarelist li img {width:64px; height:auto; margin:0 -18px}
+#softwarelist li .msg {margin:0 0 0 50px} 
+.alt #softwarelist li img {width:120px}
+.alt #softwarelist li .msg {margin:18px 0 0 90px}
+.alt #softwarelist li .msg h4 {font-size:14px}
+
+#newslist {margin:0 0 24px}
+#newslist li {background:url(/ama/images/arrow_333.gif) no-repeat right bottom}
+
+#learnlist img {border:1px solid #fa0}
+.alt #learnlist img {border:1px solid #188}
+
+.collagelist {display:block; list-style:none; margin:0 -3px 0 0; padding:0; height:260px}
+.collagelist li {width:48px; height:80px; float:left; position:relative; margin:0 3px 3px 0; opacity:0.75; text-align:center}
+.collagelist li div {width:100%; height:100%; overflow:hidden; position:absolute; text-align:left}
+.collagelist li div h4 {display:none; font:bold 12px Arial; color:#666; margin:0; padding:6px 0 0}
+.collagelist li div.popped {background:#fff; padding:9px; border:3px solid #bbb; z-index:1000; top:-12px; left:-12px}
+.collagelist li div.popped h4 {display:block}
+.alt .collagelist li {width:65px}
+.collagelist li:hover {opacity:1}
+.collagelist li img {display:block; height:100%; width:auto; margin:0 auto; margin-left:-40%}
+.collagelist li div.popped img {margin:0}
+
+.tripcol .google {position:relative; padding: 48px 12px 0}
+.tripcol .google form {border:1px solid #666; position:absolute; bottom:0px; left:0px; width:202px}
+.tripcol .google form input[type=text]{border:none; background:#fff; padding:3px; width:100px; line-height:14px;background: #FFF url(/ama/images/icon_google.gif) no-repeat 6px top;}
+.tripcol .google form input[type=submit]{background:#fa0; color:#000; float:right; border:none; margin:2px; font:bold 11px/14px Arial}
+.tripcol .google {}
+
+.home_arrow {background: url(/ama/images/home_arrow.gif) no-repeat; height: 69px; width: 10px; position: absolute; top: 34px;}
+.home_arrow.first {left: 245px}
+.home_arrow.second {left: 503px}
+.alt .home_arrow {visibility:hidden}
+
+.spotlight_profile {margin:0 0 12px; padding:0}
+.spotlight_profile .thumb, .memberinfo a {float:left; width:48px; height:48px; overflow:hidden}
+.memberinfo a {overflow:visible}
+.memberinfo a img {width:100%; height:auto; margin:0 auto}
+.spotlight_profile .msg, .memberinfo p {margin: 0 0 0 60px}
+.spotlight_design, .memberdesign {width:100%; overflow:hidden; margin:0 0 12px; padding:12px 0 0; clear: both}
+.spotlight_profile img {max-width:100%; height:auto}
+.spotlight_design .thumb {float:left; width:80px; height:80px; overflow:hidden}
+.spotlight_design .thumb img {max-width:100%; height:auto}
+.spotlight_design .msg {margin:0 0 0 98px}
+
+/* DOWNLOAD CENTER / DOWNLOAD DETAILS */
+div.important {padding: 12px; border: 2px solid #EFD5A4;}
+
+* .box {background:url("/ama/images/career/box-bg.jpg") repeat-x scroll 0 0 #FCFCFC;border:1px solid #E5E5E5;color:#000000;margin-bottom:15px;padding:10px;}
+
+
+div.content_box{background:url("/ama/images/gradient.gif") repeat-x scroll left bottom #F3F3F3;padding:0px; margin-bottom: 16px}
+.content_box .inner_content{padding: 12px; border:1px solid #DDDDDD;}
+.content_box .inner_content ul{padding: 0px; margin: 12px 0;list-style: none;}
+.content_box .inner_content a.content_link{ padding-left: 20px; background: url(/ama/images/arrow_333.gif)left center no-repeat; font-weight: bold;}
+.content_box h3{ margin: 0}
+h3 a.contentimg {background:none repeat scroll 0 0 #111111;color:#FFFFFF;display:block;font:14px/17px "Kievit",Arial;letter-spacing:0.08em;padding:6px 12px;}
+a.large_button{background:url("/ama/images/gradient_btn.gif") repeat-x scroll left top #FFFFFF;border:1px solid #DDDDDD;color:#222222;font:18px/24px Kievit,Arial,sans-serif;padding:3px 20px;text-decoration:none; display: inline-block; margin: 16px 0;}
+.product a.new_version{margin-bottom: 24px; display: block;}
+.product li.serial {margin: 8px 0; font-size: 13px;}
+.product_version{clear:both}
+
+
+/* MY SOFTWARE */
+ul.my_software{list-style: none; margin:0; padding: 0;}
+ul.my_software h3{margin: 0;}
+ul.my_software a.contentimg {background-color: #3f3f3f}
+ul.my_software .inner_content{padding: 12px}
+ul.my_software li ul {list-style:none; margin:0; padding:0;}
+ul.my_software li ul li{padding: 0; border:none; margin:0;}
+ul.my_software .thumb img{float: left; max-width: 83px;}
+ul.my_software .description{padding: 0 0 8px 0; margin: 0 0 0 103px; width:475px;}
+ul.my_software .description span.desc_name{font-weight: bold; width:100px; display: inline-block;}
+ul.my_software ul.addl_info{width: 130px; float: right;}
+ul.my_software ul.addl_info li{margin: 0 0 12px 0;}
+ul.my_software ul.prev_version{border-top: 1px solid #DDD; padding: 8px 0}
+
+
+
+/* SHOWCASE */
+
+a.btn_back {font-weight:bold; background:#ddd url(/ama/images/arrow_333_left.gif) no-repeat 6px 6px; line-height:12px; padding:6px; padding-left:27px}
+ul.showcase {clear:both; border-top:1px solid #ddd}
+ul.showcase li {margin:0; padding:12px 0 18px; border-bottom:1px solid #ddd}
+.showcase .blocklist_img {float:left; width:100px; height:75px; overflow:hidden; margin:0 0 3px; padding:0; text-align:center}
+.showcase .blocklist_img img {display:block; max-width:100%; height:auto; margin:0 auto 6px}
+.showcase .blocklist_actions {float:left; clear:left; width:100px; margin:0; padding:0}
+.showcase .blocklist_actions a {display:block; background:#eee no-repeat 3px center; color:#333; font-weight:bold; margin:0 0 2px; padding:3px 3px 3px 24px; text-decoration:none}
+.showcase .blocklist_actions a:hover, td#content_cell .content .social_enhance a:hover  {background-color:#188; color:#fff}
+.showcase .blocklist_actions a.app_view {background-image:url(/editor/images/icons/fam/silk/magnifier.png)}
+.showcase .blocklist_actions a.app_edit {background-image:url(/editor/images/icons/fam/silk/pencil.png)}
+.showcase .blocklist_actions a.app_delete {background-image:url(/editor/images/icons/fam/silk/delete2.png)}
+.showcase .blocklist_actions a.app_delete:hover {background-color:#d00}
+.showcase .blocklist_actions .tag a,
+.showcase .blocklist_actions .tagged a{background-image:url(/ama/images/thumb_up.png)}
+.showcase .blocklist_actions .tag a:hover, 
+.showcase .blocklist_actions .tagged a:hover{background-color:#fa0}
+
+/*New 'Voted'  they may change the icon/hover color etc. If so it needs changed here and in the #showcase_profile stles*/
+.showcase .blocklist_actions .vote a,
+.showcase .blocklist_actions .voted a{background-image:url(/ama/images/thumb_up.png)}
+.showcase .blocklist_actions .vote a:hover, 
+.showcase .blocklist_actions .voted a:hover{background-color:#fa0}
+
+.showcase .blocklist_actions a.share_btn{background-image:url(/ama/images/share.png)}
+.showcase .blocklist_actions a.share_btn:hover{background: #000 url(/ama/images/share_hover.png) no-repeat 3px center;}
+
+.showcase .blocklist_desc {margin:0 0 0 112px; padding:0}
+.showcase .blocklist_desc h1 {} /* same as h3 at top of file */
+.showcase .blocklist_stats {color:#999; font:bold 10px/13px Arial}
+.showcase .blocklist_stats .star_container {float:left; margin:0 6px 0 0}
+.showcase .blocklist_stats cite {font-style:normal}
+
+.sidecol .showcase_section, #memberbox {border:1px solid #ddd; padding:6px 12px; margin:0 0 18px}
+.sidecol .showcase_section .thumblist {border:none}
+.sidecol .showcase_section .thumblist li {border:none}
+
+.showcase_gallery .mainbox form#gallery_search {clear:both}
+.showcase_gallery .mainbox form#gallery_search label{width:90px; display: inline-block; margin-bottom: 12px;}
+.showcase_gallery .mainbox form#gallery_search button{margin-top: 24px;}
+
+.showcase_detail_page #showcase_files{border-top: 1px solid #DDD;}
+
+#post #subscribe {width: 120px; float: right; border: none;}
+#post div.subscribe a{width: 70px; float: right;}
+#post h3.sub_float{width: auto; float: left}
+textarea#discussion_message{width:100% !important}
+
+
+.questions_mp .social_enhance a{background-color: #ddd}
+.questions_mp .box{padding: 0}
+.questions_mp #questions .box {padding: 10px}
+
+/*  Social Enhance  */ 
+
+#showcase_profile .thumb span, #showcase_profile .thumb a, #post div.subscribe a{background-color: #EEE;background-repeat: no-repeat;background-position: 3px center;display:block;font:bold 10px/18px Arial,Helvetica,sans-serif;margin:3px 0 0;padding:2px 6px 2px 24px;text-align:left;color: #333;}
+
+#showcase_profile .thumb a:hover, #post div.subscribe a:hover{background-color:#188; color:#fff; text-decoration: none}
+#showcase_profile .showcase .blocklist_actions a.app_view {background-image:url(/editor/images/icons/fam/silk/magnifier.png)}
+#showcase_profile .showcase .blocklist_actions a.app_edit {background-image:url(/editor/images/icons/fam/silk/pencil.png)}
+#showcase_profile .showcase .blocklist_actions a.app_delete {background-image:url(/editor/images/icons/fam/silk/delete2.png)}
+#showcase_profile .showcase .blocklist_actions a.app_delete:hover {background-color:#d00}
+
+#showcase_profile .showcase .blocklist_actions .tag a,
+#showcase_profile .showcase .blocklist_actions .tagged a,
+#showcase_profile .thumb .tag a,
+#showcase_profile .thumb .tagged a,
+#showcase_profile .social_enhance .tag a, 
+#showcase_profile .social_enhance .tagged a {background-image:url(/ama/images/thumb_up.png)}
+
+#showcase_profile .showcase .blocklist_actions .tag a:hover, 
+#showcase_profile .showcase .blocklist_actions .tagged a:hover, 
+#showcase_profile .thumb .tag a:hover,
+#showcase_profile .thumb .tagged a:hover,
+#showcase_profile .social_enhance .tag a:hover,
+#showcase_profile .social_enhance .tagged a:hover {background-color:#fa0}
+
+/*New 'Voted'  they may change the icon/hover color etc. If so it needs changed here and in the .showcase .blocklist_actions stles*/
+#showcase_profile .showcase .blocklist_actions .vote a,
+#showcase_profile .showcase .blocklist_actions .voted a,
+#showcase_profile .thumb .vote a,
+#showcase_profile .thumb .voted a,
+#showcase_profile .social_enhance .vote a, 
+#showcase_profile .social_enhance .voted a {background-image:url(/ama/images/thumb_up.png)}
+
+#showcase_profile .showcase .blocklist_actions .vote a:hover, 
+#showcase_profile .showcase .blocklist_actions .voted a:hover, 
+#showcase_profile .thumb .vote a:hover,
+#showcase_profile .thumb .voted a:hover,
+#showcase_profile .social_enhance .vote a:hover,
+#showcase_profile .social_enhance .voted a:hover {background-color:#fa0}
+
+
+#showcase_profile .showcase .blocklist_actions a.share_btn,
+#showcase_profile .thumb a.share_btn,
+#showcase_profile .social_enhance a.share_btn {background-image:url(/ama/images/share.png)}
+
+#showcase_profile .showcase .blocklist_actions a.share_btn:hover,
+#showcase_profile .thumb a.share_btn:hover,
+#showcase_profile .social_enhance a.share_btn:hover{background: #000 url(/ama/images/share_hover.png) no-repeat 3px center;}
+
+#showcase_profile .social_enhance a.subscribe,
+#post div.subscribe a,
+#showcase_profile .social_enhance .unsubscribe {background-image:url(/ama/images/rss-icon.png)}
+
+#showcase_profile .social_enhance a.subscribe:hover,
+#post div.subscribe a:hover,
+#showcase_profile .social_enhance .unsubscribe:hover {background-image:url(/ama/images/rss-icon_hover.png); background-color: #188}
+
+.social_enhance {overflow: hidden;}
+.social_enhance a {background-color: #EEE;background-repeat: no-repeat;background-position: 3px center;display:block;font:bold 10px/18px Arial,Helvetica,sans-serif;margin:3px 0 0;padding:2px 6px 2px 24px;text-align:left;color: #333;}
+.social_enhance.inline a{width:70px; float: left; margin: 0 3px 12px 0}
+.social_enhance a:hover {background-color:#188; color:#fff; text-decoration: none}
+
+.social_enhance .tag a, .social_enhance .tagged a {background-image:url(/ama/images/thumb_up.png)}
+.social_enhance .tag a:hover, .social_enhance .tagged a:hover {background-color:#fa0}
+
+.social_enhance a.share_btn {background-image:url(/ama/images/share.png)}
+.social_enhance a.share_btn:hover{background: #000 url(/ama/images/share_hover.png) no-repeat 3px center;}
+
+.social_enhance a.subscribe,
+.social_enhance .unsubscribe {background-image:url(/ama/images/rss-icon.png)}
+
+.social_enhance a.subscribe:hover,
+.social_enhance .unsubscribe:hover {background-image:url(/ama/images/rss-icon_hover.png); background-color: #188}
+
+.social_enhance ul{list-style: none; margin: 0; padding: 0;}
+.social_enhance.fixed_width{width: 120px}
+.social_enhance.fixed_width.float_right{float:right;}
+.social_enhance.fixed_width.float_right.wrap{margin: 0 0 12px 12px}
+
+/* LEARNING CENTER */
+.info .accordionlist {margin: 0; height:100%;}
+.info .accordionlist .panel {background:#fff}
+ul.diamondlist{list-style-type: none}
+ul.diamondlist li{clear: both; margin-bottom: 2px;}
+ul.diamondlist a{display: block; padding: 4px 0; margin-left: 24px}
+.ie7 ul.diamondlist a{display: inline-block; margin-left: 0}
+ul.diamondlist input{margin:0 8px 0 0; float: left;}
+
+/* SUPPORT CENTER  */
+.supportblock {border:1px solid #ccc; margin:12px 0 0; padding:12px}
+.supportblock h3 a {float:right; padding-right:30px;}
+
+/*
+.support_faqs ul {float:left; width:369px; list-style:none; display:block; margin:0 18px 0 0; padding:0}
+.support_faqs ul li {margin:0 0 3px}
+*/
+.support_text {float: left; width:369px}
+.support_faqs form {float:left; width:369px; margin:0; padding:0}
+.support_faqs form p {font-weight:bold}
+.support_faqs form textarea {width:357px; height:80px; margin:0 0 6px; padding:6px;}
+.support_faqs select{margin-bottom: 6px}
+
+.support_resources {clear:both; margin:12px 0 0; padding:12px 0 0}
+ul.asklist li:after {clear:none}
+ul.asklist li h4 {margin:0; padding:0}
+ul.asklist li cite {margin:0 0 6px; padding:0; font-style:normal; font-weight:bold; font-size:10px; color:#666}
+ul.asklist li .msg {margin-right: 100px}
+ul.asklist li .actions {width:80px;}
+ul.asklist li .actions span, ul.asklist li .actions a {display:block; background:#eee no-repeat 3px 3px; color:#666; font-weight:bold; margin:0 0 3px; padding:3px; line-height:16px}
+ul.asklist li .actions span {text-align:center}
+ul.asklist li .actions a {padding-left:24px}
+ul.asklist li .actions a.like {background-image:url(/editor/images/icons/fam/silk/tag_green.png)}
+ul.asklist li .actions .tag a, ul.asklist li .actions .tagged a  {background-image: url(/ama/images/thumb_up.png)}
+ul.asklist li .actions .tag a:hover, ul.asklist li .actions .tagged a:hover {color: #FFF; background-color: #FA0; text-decoration: none}
+/* Ask a Question Bubble */
+* div.bubble{position:absolute;width:234px;left:-265px;top:-110px;}
+* div.bubble_interior{background:url(/ama/images/bubble2_mid.gif) repeat-y;padding:10px 20px;}
+* div.bubble_interior p{margin:0 !important}
+* div.bubble .bubble_arrow{position:absolute;top:18px;right:-34px}
+
+#facebook_container {border-bottom:1px solid #94A3C4; width:756px; height:900px}
+
+.area_summary {margin:0 0 24px}
+/*
+.area_summary .thumb {width:143px; float:left}
+.area_summary .msg {margin:0 0 0 161px}
+*/
+.autocad_right {float:right; width:200px; clear: right;}
+.autocad_center {margin:0 0 0 -12px; float: left;}
+
+/* CURRICULUM */
+.assets {margin:0 0 18px; padding:0; height:18px}
+.assets a {display:block; float:left; margin:0 6px 0 0; padding:1px 6px; background:#eee; color:#333; font:bold 11px/16px Arial, Helvetica, sans-serif}
+
+/* EVOLUTION */
+* .learning th, * .learning td{padding:5px 6px;border:solid #fff;border-width:0 2px 2px 0}
+* .learning th{background:#dadada;text-align:left}
+* .learning td{background:#ebebeb}
+* .learning tr.level2 td{background:#f5f5f5}
+* .learning tr.level2 td.col_topic{padding-left:20px}
+* .learning tr.header{font-weight:bold}
+* .learning tr.header td{background:#ebebeb}
+* .learning tr.level3 td{background:#fff;border:solid #ebebeb;border-width:0 1px 1px 0}
+* .learning tr.level3 td.col_progress{border-right-width:0}
+* .learning tr.level3 td.col_topic{padding-left:35px}
+* .learning .col_topic{width:704px}
+* .learning .col_difficulty, * .learning .col_length, * .learning .col_progress{width:100px}
+* .learning a.toggle{padding-left:15px;background:url(/ama/images/toggle-plus.gif) no-repeat 0 2px}
+* .learning a.open{background-image:url(/ama/images/toggle-minus.gif) !important}
+
+/* MEMBER ARTICLES */
+.blocklist {border-top:1px solid #ddd}
+.blocklist li {border-bottom:1px solid #ddd}
+.blocklist li .actions {width:120px; float:right; margin-bottom:6px;}
+.blocklist li .actions a {background:#eee; display:block; padding:3px 3px 3px 24px; margin:0 0 3px; font:bold 11px/16px Arial, Helvetica, sans-serif; color: #333;}
+.blocklist li .actions a:hover {background:#188; color: #FFF; text-decoration: none}
+.blocklist li .actions .tag a, .blocklist li .actions .tagged a {background: #EEE url(/ama/images/thumb_up.png) no-repeat 3px 3px}
+.blocklist li .actions .tag a:hover, .blocklist li .actions .tagged a:hover {background-color: #FA0;}
+
+.blocklist li .actions select {font:bold 11px/11px Arial, Helvetica, sans-serif; width:120px; padding:2px 0 1px 16px; color: #333}
+.ie8 .blocklist li .actions select {padding-left: 21px;}
+.blocklist li .msg {margin:0 138px 0 0; padding: 9px 0;}
+
+.ie7 .blocklist li .msg {display: inline; zoom:1;}/* double padding bug-fix */
+
+.blocklist li .msg h3 {margin:0 0 3px; padding:0}
+.blocklist li .msg cite {display:block; color:#666; margin:0 0 6px; padding:0; font:bold 11px/12px Arial, Helvetica, sans-serif}
+.blocklist li .msg p {margin:0; padding:0}
+
+.action{background: none; padding: 0; margin: 12px 0;}
+#nd_m_editprofile input.action{margin: 0;}
+
+/* MEMBER HOME */
+#rss_feeds {margin:0 0 18px}
+#rss_feeds img {margin:2px 6px -2px 0}
+
+/* INVITE FRIENDS */
+#invite_friends div {border:none !important; margin:0 !important}
+#invite_friends div p, #invite_friends div table {width:40% !important}
+#invite_friends input[type=image] {margin: 0 0 18px 328px}
+
+/* PARTICIPATING SCHOOLS */
+.listing_table td.name {font-weight:normal;}
+.participating_schools .size, .participating_schools .city, .participating_schools .state, .participating_schools .country{border-left: 1px solid #DDD;}
+.participating_schools .searchlist{margin-top:18px;}
+
+#no_designs_text h4{text-align: left; font-size: 12px}
+
+/*  UNIVERSITY DETAIL  */
+.detail {}
+.detail .detail_info {float:left; width: px; text-align:center}
+.detail .detail_info span, .detail .detail_info a {display:block; margin: 2px 0 0; background:#eee; color:#333; font:bold 10px/14px Arial; padding: 3px 6px; text-align:left}
+.detail .detail_info a:hover {text-decoration: none; color: #FFF; background-color: #188;}
+
+.detail .detail_info .tag a, .detail .detail_info .tagged a {background:#EEE url(/ama/images/thumb_up.png) no-repeat 3px center; padding-left: 24px;}
+.detail .detail_info .tag a:hover, .detail .detail_info .tagged a:hover{background-color: #FA0; text-decoration: none; color: #FFF;} 
+
+.detail .detail_info a.share_btn{background:#EEE url(/ama/images/share.png) no-repeat 3px center; padding-left: 24px;}
+.detail .detail_info a.share_btn:hover {background:#000 url(/ama/images/share_hover.png) no-repeat 3px center; text-decoration: none; color: #FFF;} 
+
+.detail .detail_body {margin:0 0 0 168px}
+.detail .detail_body h3 {margin: 18px 0 6px}
+.detail#university .detail_info a {text-align:left}
+.detail#university .detail_body h2 {margin:0 0 6px}
+.detail#university .detail_body h3 {margin:0 0 18px}
+
+.university_detail .detail .detail_info{width:300px; text-align: left;}
+.university_detail .detail .detail_info div {margin-bottom: 12px}
+.university_detail .detail .detail_body {margin-left:318px}
+.university_detail .detail .detail_info span, .university_detail .detail .detail_info a {display:block; margin: 2px 0 0; background:none; color:#333; padding: 3px 6px; text-align:left}
+
+.university_detail .detail#university .detail_info a {text-align:left; background: none;}
+.university_detail #student_listing.section .clear{clear: right}
+
+/* REMOVE FOR MOCKUPS */
+.pages {display:none}
+
+/* DISCUSSIONS */
+.discussion {margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid #ddd; }
+.top_line{border-top: 1px solid #ddd; padding-bottom: 12px}
+.personal_info{width: 190px; float: left;}
+
+.user_img{float: left; padding: 0 8px 8px 0; margin-bottom: 20px;}
+.discussion_subject {margin-left: 212px; width: 430px; overflow: hidden;}
+.adsk_new_discussion_list .actions{float: right; width: 90px;}
+.adsk_new_discussion_list .actions a{color: #333; padding: 3px; background: #eee; margin: 3px 0; display: block;}
+.adsk_new_discussion_list .actions a:hover{color: #fff;background: #188; text-decoration: none; }
+
+/* NETWORK */
+.box2{background:#FFF url(/ama/images/box2-bg.jpg) repeat-x 0 0;border:1px solid #E5E5E5;color:#000000;margin-bottom:15px;padding:10px; position: relative}
+.box2 .user_img{padding-bottom:0px; margin-bottom: 0}
+.box2 .user_info {width: 500px; float: left; margin-top: 8px;}
+
+/* ADHOC GROUP */
+#nd_m_adhoc_group_list .box2 .user_info {width: 400px; float: left; margin-top: 8px;}
+
+.box2 .invite{margin: 0 -10px -10px -10px; background:#FFF url(/ama/images/invite_bg.gif) repeat-x; color: #FFF;  padding: 4px 0px; clear: both;}
+.box2 .invite ul{width: auto; float: right; margin: 0; padding-right: 8px}
+.box2 .invite li {list-style: none; margin: 0; float: left}
+.box2 .invite p{width: 500px; float: left; margin: 0; font-size: 12px; font-weight: bold; line-height: 24px; padding-left: 8px;}
+.box2 .invite li a{color: #188; display: block; margin-left: 3px; padding: 4px 8px; background: #FFF; border: 1px solid #444; }
+.box2 .invite li a:hover{color:#FFF; background: #188; text-decoration: none;}
+
+#nd_m_adhoc_group_list .social_enhance span{padding: 3px 3px 3px 24px; color:#D00; background-color: #EEE; margin: 3px 0; display: block}
+
+.nav_bar {background: #f5f5f5; border: 1px solid #ddd; margin-bottom: 24px; clear: right;}
+.ie7 .nav_bar {height: 30px;}
+.nav_bar ul{margin: 0; padding: 0; list-style: none; overflow: hidden;}
+.nav_bar li{float: left; padding: 4px 12px; line-height: 20px}
+.nav_bar li.form{float: right; width:220px}
+.nav_bar li a{display: block;}
+
+a.take_action{display: block; width: 220px; font-size: 14px; background: #78b3b0 url(/ama/images/arrow_kicker2.gif) no-repeat 215px center; border: 1px solid #78b3b0; float: right; padding:8px; color: #fff; margin-bottom: 18px}
+a.take_action:hover {background-color: #FFF; background-image:url(/ama/images/arrow_kicker2_hover.gif); color: #188; text-decoration: none}
+
+/* FACULTY */
+#nd_m_faculty #pagetabs.small li a, .maintabs li a {padding-left:10px; padding-right: 10px;}
+
+/*  CAREER CENTER  */
+.career_center input#keywords, .career_center select{width: 190px;}
+.career_center .career_search{margin-bottom: 12px}
+.career_center #col_1{width: 220px; float: left}
+.career_center #col_2{width: 140px; float: left}
+.career_center .search_links{width: 120px; float: right;}
+.career_center .search_links a.advanced_search{font-weight: bold; padding-top: 12px; display: block;}
+.career_center .career_logo{padding-bottom: 12px}
+
+/* SHARE OVERLAY */
+#share_block {
+        position: relative;
+        display: none;
+        width: 120px;
+        margin: 0; padding: 6px;
+        position: absolute;
+        background: #fff;
+        top: 0; left: 0;
+        font-weight: bold;
+        border: 3px solid #ddd;
+	color: #333;
+	text-align:left;
+}
+#share_block a {display: block; margin-top: 1px; padding: 3px 6px 3px 24px; background-color: #eee; background-image: url(/ama/images/layout/share_map.gif); background-repeat: no-repeat; color: #188;}
+#share_block a:hover {background-color: #188; color: #fff;}
+#share_block a.email {background-position: 2px 4px;}
+#share_block a.facebook {background-position: 2px -21px;}
+#share_block a.linkedin {background-position: 2px -45px;}
+#share_block a.twitter {background-position: 2px -69px;}
+#share_block a.digg {background-position: 2px -93px;}
+#share_block a.myspace {background-position: 2px -117px;}
+
+#share_block button.close_share, button.close {
+        position: absolute;
+        top: 2px; right: 6px;
+        background: #fff url(/editor/images/icons/fam/silk/cross.png) no-repeat center center;
+        display: block;
+        width: 16px; height: 16px;
+        margin: 0; padding: 0;
+				border:none;
+}
+
+.listing_table {width:100%; margin:0 0 18px}
+.ie7 .listing_table{border-collapse: collapse; empty-cells: show;}
+.listing_table th, .listing_table td {padding:6px 12px; text-align:left; font:normal 11px/15px Arial, Helvetica, sans-serif}
+.listing_table th {color:#666; font-weight:bold; border-bottom:1px solid #000}
+.listing_table td {border-bottom:1px solid #ddd}
+.listing_table td.avatar {width:32px}
+.listing_table td.name {font-weight:bold}
+.listing_table td.name a {color:#188}
+
+.sectiontabs {margin:24px 0 0; padding:0; background:url(/ama/images/slidernavbg.gif) repeat-x left bottom; border-bottom:1px solid #DDD; height:39px;}
+.sectiontabs a {display:block; float:left; margin:0 6px 0 0; padding:12px; font:bold 14px/14px Arial; color:#666; outline:none; background:#EEE url(/ama/images/sliderbg.gif) repeat-x center bottom; border:1px solid #ddd;}
+.sectiontabs a.active {background:#fff url(none); color:#333;; border-bottom-color:#fff} 
+.section {background:#fff; padding:12px; margin:0; border:1px solid #ddd; border-top:none}
+#showcase_portfolio.showcase_section {border-top:1px solid #ddd; padding:12px}
+.section .actions {clear:both; height:27px;}
+.section .actions a.more_btn {margin:0}
+
+#widget_holder {width:300px; height:352px; float:right; background:#999}
+#widget_paramaters {list-style:none; display:block; margin:0; padding:0}
+#widget_paramaters li {padding:9px 0; border-bottom:1px solid #ccc; font-weight:bold; height:32px; line-height:32px;}
+#widget_paramaters li a.swatch {float:left; display:block; margin:0 12px 0 0; width:28px; height:28px; border:2px solid #fff; background:#ddd}
+#widget_paramaters li.generate {border:none; height:auto}
+#widget_paramaters li.generate textarea {width:100%; height:100px; margin:6px 0 0}
+
+#profile h2, #profile h3 {margin:0 0 6px;}
+#profile h4 {margin:0 0 6px;}
+#profile h5 {margin:0 0 18px;}
+
+.design_list {list-style:none; display:block; margin:0 -15px 0 0; padding:0}
+.design_list li {display:block; float:left; width:524px; overflow:hidden; margin:0 12px 12px 0; padding:12px; border:1px solid #ddd;}
+.design_list li .thumb {width:100px; height:auto; float:left;} 
+.design_list li .thumb img {display:block; width:100%; height:auto}
+.design_list li .meta {margin:0 0 0 112px; padding:0}
+.design_list li .meta h4 {margin:0 !important; padding:0}
+.design_list li .meta cite {display:block; font:bold 11px/14px Helvetica; color:#999; margin:0 0 6px; padding:0}
+.design_list li .meta cite a {color:#999}
+.design_list li .meta p {margin:0 0 6px; font:normal 11px/15px Helvetica;}
+
+.design_list li .meta h4 {margin:0 0 6px !important}
+
+#no_designs_text h4{text-align: left; font-size: 12px}
+
+.kicker_cta a{display: none}
+
+a#showcase_addgallery {display:block; background:#FCFCFC url(/ama/images/career/box-bg.jpg) repeat-x left top; border:1px solid #E5E5E5; color:#188; margin:0 0 18px; padding:10px; width: 200px; float:right; font-size: 12px; font-weight: normal}
+a#showcase_addgallery strong {font: bold 12px Arial; color:#188}
+.showcase_detail_page a#showcase_addgallery, .showcase_gallery a#showcase_addgallery {width: 218px;}
+
+#accordion.ui-accordion .ui-accordion-header .ui-icon {top:12px;}
+#accordion.ui-accordion .ui-accordion-header {padding-left:12px;}
+
+
+.curriculum_detail {margin-bottom: 36px}
+/*.curriculum_text {margin-right: 250px} to keep the text from flowing under the image */
+img.curriculum_image{max-width:240px; height: auto; float: left; padding: 0 18px 18px 0}
+
+/* SHARE IN TITLE BAR */
+#sharewrap {float:right; position:relative; width:68px}
+#sharewrap a {float:right; font:bold 11px/11px Arial, Helvetica, sans-serif; color:#fff; background:url(/ama/images/share_hover.png) no-repeat 6px center; padding:6px 9px 6px 27px; margin:0}
+.ie6 #sharewrap {display:none}
+#sharewrap:hover a {background-color:#ddd; background-image:url(/ama/images/share.png); color:#333}
+#shareBtns {display:none; position:absolute; background:#ddd; padding:9px 6px; bottom:-48px; right:-1px; border:1px solid #3f3f3f; border-top:none; width:76px; height:30px; z-index:1000}
+#sharewrap:hover #shareBtns {display:block}
+#sharewrap #shareBtns span {margin:0 3px}
+#sharewrap #shareBtns a {background:none; float:none; margin:0; padding:0}.no_bullet_list {list-style: none; margin: 0; padding: 0}
+
+/* QUICK FIX */
+body.showcase_gallery #cse {display:none} 
+#nd_regprofile iframe {margin:0 0 24px}
+
+/* REG 2.0 */
+#attributes {list-style:none; display:block; margin:0 0 24px; padding:0}
+#attributes li {background:#eee; padding:9px 12px; margin:0 0 6px; zoom:1}
+#attributes li h4 {display:block; font-weight:bold; margin:0 0 6px}
+#attributes li label {display:block; font-weight:bold}
+#attributes li ul {list-style:none; display:block; margin:0; padding:0}
+#attributes li ul li {background:none; margin:0; padding:0}
+#attributes li ul li.text, #attributes li ul li.img {padding:6px 0; padding-left:18px}
+#attributes li ul li.img input {width:180px; margin-top:-12px}
+.editable {font-size:12px; line-height:18px;}
+.editable_trigger {margin:0 18px}
+#attributes input[type=checkbox], #attributes input.checkbox {margin:2px 6px 0 0}
+
+/* AJAX TABS */
+#slider{margin:24px -18px -18px;position:relative}
+#first_home #slider{margin:21px 0}
+#dc_slidertabs{display:block;list-style:none;margin:24px 0 0;padding:0 12px;border-bottom:1px solid #ddd;height:39px;background:url(/ama/images/slidernavbg.gif) repeat-x left bottom; clear: left}
+#dc_slidertabs ul {list-style:none; display:block; margin:0; padding:0; height:39px}
+#dc_slidertabs ul.loading {background:url(/editor/images/waitcircle.gif) no-repeat right center}
+#dc_slidertabs li{display:inline;margin:0;padding:0}
+#dc_slidertabs li a{display:block;float:left;margin:0 3px;padding:12px;background:#eee url(/ama/images/sliderbg.gif) repeat-x center bottom;color:#666;text-decoration:none;font:bold 14px/14px Helvetica, Arial, sans-serif;border:1px solid #ddd}
+#dc_slidertabs li.selected a{background:#fff;color:#000;border-bottom-color:#fff}
+.browserIE7 .scroll{clear:none}
+/*.panel ul{display:block;margin:0 18px 0 160px;position:relative;z-index:100; zoom:1}*/
+.browserIE7 .panel ul{margin-left:198px}
+.panel ul li{margin:0 0 6px}
+.panel img{float:left;margin:0 24px 12px 0}
+#dc_slidercontainer{overflow:hidden; clear: both; position: relative;}
+#dc_sliderpanels {overflow:hidden;}
+#dc_sliderpanels .panel{float:left;width:720px;margin:0;padding:18px;min-height:100px;overflow:hidden}
+.article-public_landing #dc_sliderpanels .panel {width:584px}
+.article-public_full #dc_sliderpanels .panel {width:888px}
+
+/* TABBED CONTENT OBJECT */
+.jtablist {padding:0 12px; height:39px; background: url(/ama/images/slidernavbg.gif) repeat-x left bottom;}
+.jtablist li a {font: bold 14px/14px Helvetica, Arial, sans-serif; color:#666; border-color:#ddd; padding:12px; margin:0 3px; background: #eee url(/ama/images/sliderbg.gif) repeat-x center bottom;} 
+.jtabs_top .jtablist li.ui-tabs-selected a {padding-bottom:13px}
+.jpanel_wrap {border:none; border-top:1px solid #ddd; padding-top:24px}
+
+.halfwrap {overflow:hidden; margin:0 0 24px}
+div.half {float:left; background:#f2f2f2; width:333px; height:140px; padding:18px; margin:0 0 0 0px}
+div.borderright {margin:0}
+div.half label {display:block; margin:0 0 6px; font-weight:bold}
+div.half .actions {padding:12px 0 0}
+
+input.btn_submit {font-size:11px; color:#fff; background-color:#969696; border:0; text-align:right; height:18px; padding:3px; line-height:12px; font-family:Arial, Helvetica, sans-serif} 
+.btn_classic {margin:0 6px 0 0; padding:0 15px; background:#dadada; color:#000; border:none; height:20px; font:bold 13px/22px Helvetica, Arial, sans-serif; vertical-align:top}
+
+/* VIDEO GALLERY */
+#obj_videogallery_video {width:716px; height:403px}
+#obj_videogallery_scroller button {border:none; width:31px}
+#obj_videogallery_scroller button#prev {background:url(/ama/mod.site/mod.secondary_cert/images/prev.gif) no-repeat 0 0; border-right: 1px solid #BBB;}
+#obj_videogallery_scroller button#next {background:url(/ama/mod.site/mod.secondary_cert/images/next.gif) no-repeat 0 0; border-left: 1px solid #BBB;}
+#obj_videogallery_scroller button:hover {border-color:#333; background-color:#fa0; opacity:0.5}
+#obj_videogallery ul {list-style:none; display:block; margin:0 0 18px; padding:0; font-weight:bold}
+#obj_videogallery ul ul {list-style:disc; font-weight:normal; margin:0 0 6px 24px; padding:0}
+
+/* HIGHTLIGHTS SLIDER */
+#obj_highlights_side ul li.on .obj_highlights_tabtext {background:#188; color:#fff}
+#obj_highlights_side ul li.on {background: url(/ama/images/objectfold.png) no-repeat left bottom; margin:0 -12px -12px -48px; padding:0 12px 12px 48px}
+
+/* BEEHIVE */
+.edit_panels {float:right; width:172px; background:#ffd; padding:6px}
+
+#submitimg {margin:6px 0; border:2px solid #666}
+#submitimg.focus {border-color:#fff}
+#toolbar_wrapper {width:928px;}
+#toolbar_related {float:left; width:200px; min-height:400px; margin:0; padding:12px}
+#toolbar_related h3 {font:normal 12px/15px Arial, Helvetica, sans-serif; margin:0 0 6px; padding:0; color:#999}
+#toolbar_related ul {list-style:none; margin:0 0 18px; padding:0}
+#toolbar_related ul li {margin:0 0 6px; padding:0}
+
+#beehive_main {margin:0 0 0 200px;}
+#beehive_main h2 {margin:0 0 3px}
+#beehive_main form {background:#f6f6f6; margin:0 0 18px; padding:6px; height:28px;}
+#beehive_main form select {height:27px; line-height:27px; padding:3px 0;  margin:0 0 6px 0; border:1px solid #999; display: block; min-width: 305px; background: #fff; float:left}
+/* #beehive_main form div {float:right; width:520px; border:1px solid #999; height:25px; background:#fff} */
+#beehive_main form div {float:right; width:355; border:1px solid #999; height:27px; background:#fff}
+#beehive_main form input.text {width:120px; height:25px;  margin:0; padding:0 6px; border:none; background:#fff; color:#666}
+#beehive_main form input.text:focus {background:#ffe; color:#000}
+#beehive_main form input.submit {margin:0; height: 27px; color: #555; float:right}
+#beehive_main form input.submit:hover {opacity:1}
+
+#toolbar_results {list-style:none; margin:0; padding:0}
+#toolbar_results li {margin:0; padding:18px 0; overflow:hidden}
+#toolbar_results li li {padding:0; margin:6px 0 6px}
+#toolbar_results h3 {margin:0; padding:0; font:bold 15px/15px Arial, Helvetica, sans-serif}
+#toolbar_results p {margin:0; padding:0}
+#toolbar_results a {display:block; margin:0; padding:3px 0 0}
+
+#toolbar_results cite {display:block; margin:0; padding:3px 0; font-style:normal; font-size:10px; color:#666}
+#toolbar_results cite a {color:#7b1; cursor:pointer}
+#toolbar_results cite a.copied {color:#fa0; text-decoration:underline}
+#toolbar_results cite span {display:block; float:left; background:#eee; color:#666; margin:0 3px 3px 0; padding:1px 6px; border-radius:3px}
+
+#beehive_main .paginationlist {margin-left:30px; height:18px}
+#beehive_main .paginationlist span, .paginationlist a {padding:0; background:none}
+#beehive_main .paginationlist li {margin:0}
+#beehive_main .paginationlist li a {padding:3px 6px; font-size:12px; line-height:12px}
+#beehive_main .paginationlist li a:hover {background:none; color:#000}
+#beehive_main .paginationlist img {margin:0; float:none}
+
+.pageresultslist {text-align:right; font-size:11px; line-height:11px; margin:7px 0 12px 3px; padding:0; height:12px; float:left; display:none;}
+.pageresultslist li {margin:0; padding:0; display:inline}
+.pageresultslist span {display:inline; float:none; background:none; padding:0 2px; margin:0; font-weight:normal}
+.pageresultslist select {font-size:11px; line-height:11px}
+
+#filterlist {font:normal 11px/14px Arial; list-style:none; margin:0; margin-left:-18px; padding:0; width:200px; float:left}
+#filterlist li.filtersection {margin:0; padding:0}
+#filterlist h4 {margin:0; padding:6px 12px; color:#888; border-top:1px solid #188}
+#filterlist ul {list-style:none; margin:0; padding:0 0 36px}
+#filterlist ul li {margin:0; padding:3px 12px}
+#filterlist ul li a.selected {color:#000;font-weight:bold}
+
+#roundabout_container{position: relative;}
+.roundabout-holder { padding: 0; list-style: none; height: 240px; width: 100%;  margin: 0 auto; overflow: hidden;}
+.roundabout-moveable-item {cursor: pointer; background: #fff; width: 400px; height:240px; background: #ddd}
+.roundabout-moveable-item {height:auto; background:none}
+.roundabout-moveable-item h3{display: none}
+.roundabout-moveable-item img{width:100%; height:100%; opacity: .5; margin: 0; float: none; display: block;}
+.roundabout-in-focus {cursor: auto; -moz-box-shadow: 0 9px 10px 0 #777777; -webkit-box-shadow: 0 9px 10px 0 #777777; box-shadow: 0 9px 10px 0 #777; zoom:1}
+.roundabout-in-focus a.coverimage{display: block; position: relative;}
+.roundabout-in-focus a span{display: block; background: #0B5959; height: 100%; width: 100%; position: absolute; top:0; left: 0; display: none; padding:0 1px; -moz-box-shadow: 0 0 10px 3px #118888; -webkit-box-shadow: 0 0 10px 3px #118888; box-shadow: 0 0 10px 3px #118888;}
+.roundabout-in-focus img {opacity: 1}
+/*.roundabout-in-focus h3{display: block; margin: 16px 0; padding-left: 3px}*/
+.roundabout-in-focus h3{display: block; position:absolute; z-index:1000; left:0; bottom:0; width:380px; margin:0; padding:5px 10px; background:url(/editor/images/black_80.png); color:#eee; zoom:1}
+.roundabout-in-focus h3 a {color:#eee}
+#roundabout_container .round_nav{display: block; height: 48px; width: 48px; text-indent: -9999em; position: absolute; z-index: 500; top:100px; background-position: left top; background-repeat: no-repeat}
+#roundabout_container #previous.round_nav {background-image: url(/ama/images/prev.png); position: absolute; left: 50px;}
+#roundabout_container #next.round_nav {background-image:url(/ama/images/next.png); position: absolute;  right: 50px;}
+#roundabout_container .round_nav:hover{background-position: left bottom;}
+
+
+
+.productblock {border:1px solid #ccc; padding:10px}
+.productblock img {float:left; width:100px; height:auto; margin-right:40px}
+.productblock .serial_label {display:block; float:left; width:100px}
+.productblock h2 {background:#eee; font-size:14px; margin:-10px -10px 10px; padding:5px 10px}
+.productblock_actions {border:1px solid #ccc; background:#eee; height:33px; margin:20px 0 0; padding:5px 0 5px 10px; line-height:33px}
+.productblock_actions table {float:right}
+.productblock_actions a.large_button{  /* background: #3868D7;*/
+	margin:0; font-size:12px; line-height:21px; font-family: 'Segoe UI', Tahoma, Arial; color:#fff;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+    background: -moz-linear-gradient(
+        center bottom,
+        rgb(109,154,217) 100%,
+        rgb(52,100,177) 0%
+    );
+    background: -o-linear-gradient(
+        bottom,
+        rgb(109,154,217) 100%,
+        rgb(52,100,177) 0%
+	);
+    background: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(1, rgb(109,154,217)),
+        color-stop(0, rgb(52,100,177))
+    );
+}}
+.social_enhance.inline {margin-top:5px}
+a.contactbtn {display:block; width:241px; height:60px; background:url(/ama/images/Contact_us_up.png) no-repeat 0 0; text-indent:-9999px; margin:10px 0 0;}
+a.contactbtn:hover, a.contactbtn:active {background-image:url(/ama/images/Contact_us_down.png);}
