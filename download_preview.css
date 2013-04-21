@@ -30,12 +30,12 @@ ul,ol,li{ list-style-type:none; margin:0; padding:0;}
 .rec_box .tabs li.on{ height:57px; line-height:57px; margin-top:-2px; background:#fff; border-bottom:none 0; color:#0696d7; cursor:default;}
 .rec_box .onepage{ padding-top:24px; width:945px; display:none;}
 .rec_box .onepage .item{ float:left; display:inline; padding-right:22px;}
-.rec_box .onepage .pic{ color:#444;}
-.rec_box .onepage .pic img{ display:block; width:164px; height:164px; background:url(images/img_bg_17.png) 0 0 no-repeat; padding:0 3px 3px 0;}
+.rec_box .onepage .product-badge{ color:#444;}
+.rec_box .onepage .product-badge img{ display:block; width:164px; height:164px; background:url(images/img_bg_17.png) 0 0 no-repeat; padding:0 3px 3px 0;}
 .rec_box .onepage .t{ display:block; font-size:16px; padding:8px 0 0 10px;  overflow:hidden; width:155px; height:22px; }
 .rec_box .onepage .s{ font-size:12px; line-height:20px; }
-.rec_box .onepage .dnload{ display:block; padding-left:10px; width:156px; height:21px; line-height:21px; background:url(images/dnbg_22.png) right 0 no-repeat #0696d7; color:#fff; margin-top:10px; margin-left:1px;}
-.rec_box .onepage .dnload:hover{ text-decoration:none;}
+.rec_box .onepage .product-dl-btn { display:block; padding-left:10px; width:156px; height:21px; line-height:21px; background:url(images/dnbg_22.png) right 0 no-repeat #0696d7; color:#fff; margin-top:10px; margin-left:1px;}
+.rec_box .onepage .product-dl-btn:hover { text-decoration:none;}
 .rec_box .onepage .related{ color:#494c44; padding:7px 10px; line-height:18px;}
 .rec_box .onepage .related a{ border-bottom:dashed 1px #999; color:#494c44;}
 .rec_box .onepage .related a:hover{ text-decoration:none;}
@@ -54,8 +54,8 @@ ul,ol,li{ list-style-type:none; margin:0; padding:0;}
 .detailbox .main .title{ color:#0696d7; font-weight:700; margin-bottom:16px;}
 .detailbox .main .brief{ color:#666; font-size:13px;}
 .detailbox .main .brief p{ line-height:20px; margin-top:-5px;}
-.detailbox .main .pic{ float:left; display:inline; margin-right:-167px;}
-.detailbox .main .pic img{ display:block; width:164px; height:164px; background:url(images/img_bg_17.png) 0 0 no-repeat; padding:0 3px 3px 0;}
+.detailbox .main .product-badge { float:left; display:inline; margin-right:-167px;}
+.detailbox .main .product-badge img{ display:block; width:164px; height:164px; background:url(images/img_bg_17.png) 0 0 no-repeat; padding:0 3px 3px 0;}
 .detailbox .main .descrip,
 .detailbox .main .links{ margin-left:167px; padding:0 10px 0 20px;}
 .detailbox .main .links{ padding-top:16px;}

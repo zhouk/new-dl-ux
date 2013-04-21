@@ -1,6 +1,5 @@
-/*
-* 页面配置
-*/
+
+
 var pageConfig = {
     /* 资源文件路径 */
     pathResource: '',
@@ -9,9 +8,6 @@ var pageConfig = {
     container: '#download-ux'
 };
 
-/*
-* 隐藏或清除页面无关的元素
-*/
 var clearContent = (function() {
     var con = $(pageConfig['container']).hide();
     $('#slideshow').hide();
@@ -22,9 +18,7 @@ var clearContent = (function() {
     };
 })();
 
-/*
-* document.ready
-*/
+
 $(document).ready(function() {
     if (window.location.hash != "#admin") {
         clearContent();
@@ -39,7 +33,6 @@ var loadStyle = function() {
 	$('head').append('<link rel="stylesheet" href="http://static.autodesk.net/etc/designs/v021/autodesk/adsk-design/clientlibs/css/fonts.css">');
 }
 
-/* 渲染页面 */
 var renderPage = function() {
     if (window.template) {
 
@@ -51,13 +44,19 @@ var renderPage = function() {
     		}
     	});
     	
+    	template.helper('$concatPath', function(nodes){
+    		var path = nodes[0];
+    		for(i=1; i<nodes.length; i++) {
+    			path += '|' + nodes[i];
+    		}
+    		return path;
+    	});
+    	
         $(pageConfig['container']).html(template.render('contentTemplate', JSON));
         pageEvents();
     };
 };
 
-
-/* 页面动作/事件 */
 var pageEvents = function() {
 
     playPageCont($('.rec_box .tabs li')[0]);
@@ -75,6 +74,7 @@ var pageEvents = function() {
     };
     
     enableSmoothScroll();
+    util.tracking();
     /*
     if('onhashchange' in window){
         window.onhashchange=function(e){
@@ -84,15 +84,14 @@ var pageEvents = function() {
     }*/
 };
 
-function enableSmoothScroll() {
-	$('.pic, .dnload, .gotop').click(function(e){
+var enableSmoothScroll = function() {
+	$('.product-badge, .product-dl-btn, .gotop').click(function(e){
 		e.preventDefault();
 		e.stopPropagation();
 		$.smoothScroll({ scrollTarget: $(this).attr('href') });
 	});
 }
 
-/* 播放页面 */
 var playPageCont = function(tabId) {
     
     var prevIndex = -1,
@@ -137,7 +136,6 @@ var playPageCont = function(tabId) {
     }*/
 };
 
-/* 计算并改变背景图的位置 */
 var calcBgPos = function() {
     var w = $('body').width(),
         pos_x = (w - 960) / 2 + 960;
@@ -146,3 +144,31 @@ var calcBgPos = function() {
     });
 };
 
+window.util = window.util || {};
+
+util.tracking = function() {
+	var e = util.tracking || {};
+
+    e.linkClick = function (g, j, h) {
+        var i = s_gi((adsk.a.getAccount) ? adsk.a.getAccount() : adsk.a.account);
+        var status = Oxygen ? 'out' : 'in';
+        i.eVar21 = adsk.s.trimToLength(255, adsk.s.getName() + " > " + status + " > " + g + " > " + j);
+        i.prop21 = adsk.s.trimToLength(100, i.eVar21);
+        i.linkTrackVars = "prop21,eVar21";
+        if (h) {
+            i.linkTrackVars += ",events";
+            i.events = i.linkTrackEvents = h
+        }
+        i.usePlugins = false;
+        i.tl(true, "o", i.prop21)
+    };
+    
+    e.boot = function() {
+    	$('.track').click(function(event){ e.linkClick($(this).attr('trackinggroup'), $(this).attr('trackingkey')); event.stopPropagation(); });
+    };
+    
+    e.boot();
+};
+
+/* Smooth Scroll */
+(function($){var version='1.4.10',defaults={exclude:[],excludeWithin:[],offset:0,direction:'top',scrollElement:null,scrollTarget:null,beforeScroll:function(){},afterScroll:function(){},easing:'swing',speed:400,autoCoefficent:2},getScrollable=function(opts){var scrollable=[],scrolled=false,dir=opts.dir&&opts.dir=='left'?'scrollLeft':'scrollTop';this.each(function(){if(this==document||this==window){return}var el=$(this);if(el[dir]()>0){scrollable.push(this)}else{el[dir](1);scrolled=el[dir]()>0;if(scrolled){scrollable.push(this)}el[dir](0)}});if(!scrollable.length){this.each(function(index){if(this.nodeName==='BODY'){scrollable=[this]}})}if(opts.el==='first'&&scrollable.length>1){scrollable=[scrollable[0]]}return scrollable},isTouch='ontouchend'in document;$.fn.extend({scrollable:function(dir){var scrl=getScrollable.call(this,{dir:dir});return this.pushStack(scrl)},firstScrollable:function(dir){var scrl=getScrollable.call(this,{el:'first',dir:dir});return this.pushStack(scrl)},smoothScroll:function(options){options=options||{};var opts=$.extend({},$.fn.smoothScroll.defaults,options),locationPath=$.smoothScroll.filterPath(location.pathname);this.unbind('click.smoothscroll').bind('click.smoothscroll',function(event){var link=this,$link=$(this),exclude=opts.exclude,excludeWithin=opts.excludeWithin,elCounter=0,ewlCounter=0,include=true,clickOpts={},hostMatch=((location.hostname===link.hostname)||!link.hostname),pathMatch=opts.scrollTarget||($.smoothScroll.filterPath(link.pathname)||locationPath)===locationPath,thisHash=escapeSelector(link.hash);if(!opts.scrollTarget&&(!hostMatch||!pathMatch||!thisHash)){include=false}else{while(include&&elCounter<exclude.length){if($link.is(escapeSelector(exclude[elCounter++]))){include=false}}while(include&&ewlCounter<excludeWithin.length){if($link.closest(excludeWithin[ewlCounter++]).length){include=false}}}if(include){event.preventDefault();$.extend(clickOpts,opts,{scrollTarget:opts.scrollTarget||thisHash,link:link});$.smoothScroll(clickOpts)}});return this}});$.smoothScroll=function(options,px){var opts,$scroller,scrollTargetOffset,speed,scrollerOffset=0,offPos='offset',scrollDir='scrollTop',aniProps={},aniOpts={},scrollprops=[];if(typeof options==='number'){opts=$.fn.smoothScroll.defaults;scrollTargetOffset=options}else{opts=$.extend({},$.fn.smoothScroll.defaults,options||{});if(opts.scrollElement){offPos='position';if(opts.scrollElement.css('position')=='static'){opts.scrollElement.css('position','relative')}}}opts=$.extend({link:null},opts);scrollDir=opts.direction=='left'?'scrollLeft':scrollDir;if(opts.scrollElement){$scroller=opts.scrollElement;scrollerOffset=$scroller[scrollDir]()}else{$scroller=$('html, body').firstScrollable()}opts.beforeScroll.call($scroller,opts);scrollTargetOffset=(typeof options==='number')?options:px||($(opts.scrollTarget)[offPos]()&&$(opts.scrollTarget)[offPos]()[opts.direction])||0;aniProps[scrollDir]=scrollTargetOffset+scrollerOffset+opts.offset;speed=opts.speed;if(speed==='auto'){speed=aniProps[scrollDir]||$scroller.scrollTop();speed=speed/opts.autoCoefficent}aniOpts={duration:speed,easing:opts.easing,complete:function(){opts.afterScroll.call(opts.link,opts)}};if(opts.step){aniOpts.step=opts.step}if($scroller.length){$scroller.stop().animate(aniProps,aniOpts)}else{opts.afterScroll.call(opts.link,opts)}};$.smoothScroll.version=version;$.smoothScroll.filterPath=function(string){return string.replace(/^\//,'').replace(/(index|default).[a-zA-Z]{3,4}$/,'').replace(/\/$/,'')};$.fn.smoothScroll.defaults=defaults;function escapeSelector(str){return str.replace(/(:|\.)/g,'\\$1')}})(jQuery);
