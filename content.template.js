@@ -1,29 +1,29 @@
 template.compile('contentTemplate', '\
 	<div class="pg_banner"><h1>Free Design Software for Students and Educators</h1></div> \
 	<div class="bar_helpme"> \
-	    <a class="icon_help" href="#" title="#"><span>Help Me Choose</span></a> \
+	    <a class="icon_help" href="javascript:window.open(\'http://autodesk.creativevirtual.com/autodesk/bot.htm?isJSEnabled=1&sitecontext=PRODUCTSELECTOR\',\'VA\',\'width=300,height=660,resizable=0,location=0,toolbar=0\'); e.preventDefault();" title="#"><span>Help Me Choose</span></a> \
 	</div> \
 	\
 	<div class="rec_box"> \
 	\
 	    <ol class="tabs fix"> \
 	        <% for(i=0; i<tabs.length; i++) { %>\
-	        	<li id="<%= tabs[i].id %>" class="<%= i==0?\'on\':\'\' %>" style="width:<%= tabs[i].width %>"><%= tabs[i].name %></li>\
+	        	<li id="<%= tabs[i].id %>" class="<%= i==0?\'on \':\'\' %>track" trackinggroup="tab" trackingkey="<%= tabs[i].name %>" style="width:<%= tabs[i].width %>"><%= tabs[i].name %></li>\
 	        <% } %>\
 	    </ol> \
 	    \
 	    <% for(i=0; i<tabs.length; i++) { %>\
-	    \
+	    	<% var tab = tabs[i] %>\
 	    	<% if(tabs[i].products) { %>\
 		        <ul class="onepage fix" style="display:<%= i==0?\'block\':\'none\' %>"> \
 					<% for(j=0; j<tabs[i].products.length; j++) { %>\
 						<% var p=tabs[i].products[j], product = $getProduct(p.id, products) %>\
 						<% if(product != null) { %>\
 		            	<li class="item">\
-			                <a class="pic" href="<%= \'#\' + tabs[i].id + \'-\' + p.id %>"><img src="<%= product.image %>" alt="<%= product.name %>" /><span class="t <%= product.name.length > 20 ? \'s\':\'\' %>"><%= product.name %></span></a> \
-			                <a class="dnload" href="<%= \'#\' + tabs[i].id + \'-\' + p.id %>">DOWNLOAD</a> \
+			                <a class="product-badge track" trackinggroup="badge" trackingkey="<%= $concatPath([tab.name, product.name]) %>" href="<%= \'#\' + tabs[i].id + \'-\' + p.id %>"><img src="<%= product.image %>" alt="<%= product.name %>" /><span class="t <%= product.name.length > 20 ? \'s\':\'\' %>"><%= product.name %></span></a> \
+			                <a class="product-dl-btn track" trackinggroup="dl-btn" trackingkey="<%= $concatPath([tab.name, product.name]) %>" href="<%= \'#\' + tabs[i].id + \'-\' + p.id %>">DOWNLOAD</a> \
 			            	<% if(i==0) { %> \
-			                	<p class="related">More products for<br /><a href="<%= tabs[i].products[j].relatedUrl %>"><%= tabs[i].products[j].relatedCategory %></a></p> \
+			                	<p class="related">More products for<br /><a class="track" trackinggroup="more-products" trackingkey="<%= $concatPath([tab.name, product.name, tab.products[j].relatedCategory]) %>" href="<%= tabs[i].products[j].relatedUrl %>"><%= tabs[i].products[j].relatedCategory %></a></p> \
 			                <% } %> \
 		            	</li>\
 		            	<% } else { %>\
@@ -41,7 +41,7 @@ template.compile('contentTemplate', '\
 	            			<ul class="list">\
 	            			<% for(var key in allProducts.categories[c].productIDs) { %>\
 	            				<% var product = $getProduct(allProducts.categories[c].productIDs[key], allProducts.products) %>\
-	            				<li><a href="<%= product.url %>"><%= product.text %></a></li>\
+	            				<li><a class="track" trackinggroup="all-by-design-purpose" trackingkey="<%= $concatPath([allProducts.categories[c].name,product.text]) %>" href="<%= product.url %>"><%= product.text %></a></li>\
 	            			<% } %>\
 	            			</ul>\
 	            		<% } %>\
@@ -52,7 +52,7 @@ template.compile('contentTemplate', '\
 	            		<ul class="list">\
 	            			<% var sorted = allProducts.products.sort(function(a,b){ return a.text > b.text ? 1:-1; }) %>\
 	            			<% for(var p in sorted) { %>\
-	            			<li><a href="<%= sorted[p].url %>"><%= sorted[p].text %></a></li>\
+	            			<li><a class="track" trackinggroup="all-alphabetic" trackingkey="<%= sorted[p].text %>" href="<%= sorted[p].url %>"><%= sorted[p].text %></a></li>\
 	            			<% } %>\
 	            		</ul>\
 	            	</div>\
@@ -69,32 +69,34 @@ template.compile('contentTemplate', '\
 	\
 	\
 	<% for(i=0; i<tabs.length-1; i++) { %>\
+    	<% var tab = tabs[i] %>\
 		<div class="groupbox">\
 			<% for(j=0; j<tabs[i].products.length; j++) { %>\
 				<% var product = $getProduct(tabs[i].products[j].id, products) %>\
 				<% if(product == null) continue; %>\
-				<div id="<%= tabs[i].id + \'-\' + tabs[i].products[j].id %>" class="detailbox fix">\
+				<% var productContainerId = tabs[i].id + \'-\' + tabs[i].products[j].id %>\
+				<div id="<%= productContainerId %>" class="detailbox fix">\
 				\
 			        <div class="main lf"> \
 			        \
 		            	<h2 class="title"><%= product.name %></h2>\
 			            \
 			            <div class="brief fix"> \
-			                <a class="pic"><img src="<%= product.image %>" alt="<%= product.name %>" /></a> \
+			                <a class="product-badge"><img src="<%= product.image %>" alt="<%= product.name %>" /></a> \
 			                <div class="descrip"> \
 			                    <p><%= product.description %></p> \
 			                </div> \
 			                <ul class="links fix"> \
 			                    <% for(var info in product.productLinks){ %> \
 			                        <% var link=product.productLinks[info]; %> \
-			                        <li><a href="<%= link.url %>"><%= link.text %></a></li> \
+			                        <li><a target="_blank" class="track" trackinggroup="info" trackingkey="<%= $concatPath([tabs[i].name, product.name, link.text]) %>" href="<%= link.url %>"><%= link.text %></a></li> \
 			                    <% } %> \
 			                </ul> \
 			            </div> \
 			            \
 			            <div class="tool fix"> \
 			                <div class="like lf"> \
-			                    <div class="fb-like" data-href="http://students.autodesk.com/?nd=download#<%=tabs[i].id + \'-\' + tabs[i].products[j].id%>" data-send="false" data-width="450" data-show-faces="false" data-font="segoe ui"></div>\
+								<fb:like href="http://students.autodesk.com/?nd=download#<%=tabs[i].id + \'-\' + tabs[i].products[j].id%>" send="false" width="450" show_faces="false" font="segoe ui"></fb:like>\
 			                </div> \
 				        </div>\
 				        \
@@ -123,7 +125,7 @@ template.compile('contentTemplate', '\
 			                                	<% if(row.releases[l] != null) { %>\
 			                                		<td>\
 			                                			<% for(var index in row.releases[l].files) { %>\
-			                                				<a class="login" href="<%= row.releases[l].files[index].url %>"><%= row.releases[l].files[index].text %></a>\
+			                                				<a class="login track" trackinggroup="file" trackingkey="<%= $concatPath([tabs[i].name, product.name, row.language, row.platform, row.releases[l].release, row.releases[l].files[index].text]) %>" href="<%= row.releases[l].files[index].url %>"><%= row.releases[l].files[index].text %></a>\
 			                                			<% } %>\
 			                                		</td> 	\
 			                                	<% } else { %>\
@@ -139,7 +141,7 @@ template.compile('contentTemplate', '\
 			            </div> \
 			            \
 			            <div class="boxbtm fix"> \
-			                <a class="other lf" href="<%= product.othersUrl %>">Other languages &amp; versions</a> \
+			                <a class="other lf track" trackingcategory="other versions" trackingkey="<%= $concatPath([tabs[i].name, product.name]) %>" href="<%= product.othersUrl %>">Other languages &amp; versions</a> \
 			                <a class="gotop rf" href="javascript:scroll(0,0);">goto top</a> \
 		 		        </div> \
 			        \
@@ -152,7 +154,7 @@ template.compile('contentTemplate', '\
 			            <h4 class="sub"><%= product.resources[m].heading %></h4> \
 			            <div class="des"> \
 			                <% for(var n in product.resources[m].links){ %> \
-			                	<p><a href="<%= product.resources[m].links[n].url %>"><%= product.resources[m].links[n].text %></a></p> \
+			                	<p><a target="_blank" class="track" trackinggroup="resource" trackingkey="<%= $concatPath([tab.name, product.name, product.resources[m].links[n].text]) %>" href="<%= product.resources[m].links[n].url %>"><%= product.resources[m].links[n].text %></a></p> \
 			                <% } %> \
 			            </div> \
 			            <% } %>\
