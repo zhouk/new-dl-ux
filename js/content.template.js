@@ -154,7 +154,8 @@ template.compile('contentTemplate', '\
 			            <h4 class="sub"><%= product.resources[m].heading %></h4> \
 			            <div class="des"> \
 			                <% for(var n in product.resources[m].links){ %> \
-			                	<p><a target="_blank" class="track" trackinggroup="resource" trackingkey="<%= $concatPath([tab.name, product.name, product.resources[m].links[n].text]) %>" href="<%= product.resources[m].links[n].url %>"><%= product.resources[m].links[n].text %></a></p> \
+			                	<% var link = product.resources[m].links[n] %>\
+			                	<p><a target="<%= typeof link.sameWindow == \'undefined\' ? \'_blank\' : \'\' %>" class="track" trackinggroup="resource" trackingkey="<%= $concatPath([tab.name, product.name, link.text]) %>" href="<%= link.url %>"><%= link.text %></a></p> \
 			                <% } %> \
 			            </div> \
 			            <% } %>\
