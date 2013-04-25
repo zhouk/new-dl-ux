@@ -1,7 +1,7 @@
 template.compile('contentTemplate', '\
 	<div class="pg_banner"><h1>Free Design Software for Students and Educators</h1></div> \
 	<div class="bar_helpme"> \
-	    <a class="icon_help" href="javascript:window.open(\'http://autodesk.creativevirtual.com/autodesk/bot.htm?isJSEnabled=1&sitecontext=PRODUCTSELECTOR\',\'VA\',\'width=300,height=660,resizable=0,location=0,toolbar=0\'); e.preventDefault();" title="#"><span>Help Me Choose</span></a> \
+	    <a class="icon_help track" trackinggroup="product selector" trackingkey="" href="javascript:window.open(\'http://autodesk.creativevirtual.com/autodesk/bot.htm?isJSEnabled=1&sitecontext=PRODUCTSELECTOR\',\'VA\',\'width=300,height=660,resizable=0,location=0,toolbar=0\'); e.preventDefault();" title="#"><span>Help Me Choose</span></a> \
 	</div> \
 	\
 	<div class="rec_box"> \
