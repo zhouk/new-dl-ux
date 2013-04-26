@@ -6,7 +6,7 @@ $(document).ready(
 
 
 function showPreviewTip() {	
-	if(window.location.hash != '#preview' && window.location.hash != '#force-preview') return;
+	//if(window.location.hash != '#preview' && window.location.hash != '#force-preview') return;
 	if(window.location.hash == '#force-preview') $.removeCookie('hide-preview-tip');
 	if($.cookie('hide-preview-tip')) return;
 	
