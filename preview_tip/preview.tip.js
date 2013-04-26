@@ -10,7 +10,9 @@ function showPreviewTip() {
 	if(window.location.hash == '#force-preview') $.removeCookie('hide-preview-tip');
 	if($.cookie('hide-preview-tip')) return;
 	
-	$('#main').before('<a id="preview-tip" href="http://students.autodesk.com/?nd=download"><div>We\'re inviting you to check out our new download page!<span>|&nbsp;&nbsp;&nbsp;&nbsp;PREVIEW NOW</span><em>x</em></div></a>');
+	$('#preview-promo').css('display', 'block');
+	
+	$('#main').before('<a id="preview-tip" href="http://students.autodesk.com/?nd=download"><div>We invite you to check out a preview of our new download center!<span>|&nbsp;&nbsp;&nbsp;&nbsp;PREVIEW NOW</span><em>x</em></div></a>');
 	
 	setTimeout(function(){
 		$('#preview-tip div').slideDown("slow");
