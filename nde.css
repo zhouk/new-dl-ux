@@ -63,7 +63,7 @@ ul,ol,li{ list-style-type:none; margin:0; padding:0;}
 .detailbox .main .links a{ border-bottom:dashed 1px #999; color:#666;}
 .detailbox .main .links a:hover{ text-decoration:none;}
 .detailbox .tool{ padding-top:10px;}
-.detailbox .like{}
+.detailbox .like span, .like iframe { min-height: 24px !important; }
 .detailbox .share{ padding-right:17px; padding-top:5px;}
 .detailbox .share a{ display:inline-block; width:18px; height:18px; background:url(images/share_03.png) 0 0 no-repeat;}
 .detailbox .share a.email{ background-position:0 0;}
