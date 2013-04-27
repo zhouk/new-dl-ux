@@ -141,7 +141,7 @@ template.compile('contentTemplate', '\
 			            </div> \
 			            \
 			            <div class="boxbtm fix"> \
-			                <a class="other lf track" trackingcategory="other versions" trackingkey="<%= $concatPath([tabs[i].name, product.name]) %>" href="<%= product.othersUrl %>">Other languages &amp; versions</a> \
+			                <a class="other lf track" trackinggroup="other-versions" trackingkey="<%= $concatPath([tabs[i].name, product.name]) %>" href="<%= product.othersUrl %>">Other languages &amp; versions</a> \
 			                <a class="gotop rf" href="javascript:scroll(0,0);">goto top</a> \
 		 		        </div> \
 			        \
