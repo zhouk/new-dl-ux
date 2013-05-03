@@ -152,7 +152,7 @@ util.tracking = function() {
     e.linkClick = function (g, j, h) {
         var i = s_gi((adsk.a.getAccount) ? adsk.a.getAccount() : adsk.a.account);
         var status = typeof Oxygen == 'undefined' ? 'in' : 'out';
-        i.eVar21 = adsk.s.trimToLength(255, "edu:us:nde > " + status + " > " + g + " > " + j);
+        i.eVar21 = adsk.s.trimToLength(255, adsk.s.getName() + " > " + status + " > " + g + " > " + j);
         i.prop21 = adsk.s.trimToLength(100, i.eVar21);
         i.linkTrackVars = "prop21,eVar21";
         if (h) {
