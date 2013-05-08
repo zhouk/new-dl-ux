@@ -59,7 +59,7 @@ var renderPage = function() {
 
 var pageEvents = function() {
 
-    playPageCont($('.rec_box .tabs li')[0]);
+    playPageCont($('.rec_box .tabs li')[5].id);
 
 	/*$('.rec_box .tabs li').each(function(){
 		if(!$(this).hasClass('on')) $(this).click(function(){ playPageCont(this.id) });
